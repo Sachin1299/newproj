@@ -1,12 +1,16 @@
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavScroll from './Components/NavScroll';
+import CustomNavbar from './Components/CustomNavbar';
+
+import TopNavbar from './Components/TopNavbar';
 
 function App() {
   return (
     <>
-    <NavScroll/>
+    <TopNavbar />
+    <CustomNavbar/>
+    <div className="overlay">
+      {/* Your page content */}
+    </div>
     </>
   );
 }
