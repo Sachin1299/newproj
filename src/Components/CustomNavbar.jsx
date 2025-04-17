@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Container} from 'react-bootstrap';
-import '../Custom.css';
+import '../style/Custom.css';
 import {NavLink} from 'react-router-dom'
 
 const CustomNavbar = () => {
