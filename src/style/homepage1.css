@@ -48,8 +48,8 @@ body {
     opacity: 0;
   }
   
-  .hero-buttons button {
-    margin: 0 0.5rem;
+  .hero-buttons {
+    margin: 17px ;
   }
   
   @keyframes slideIn {

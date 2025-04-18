@@ -214,10 +214,10 @@ const HomePage = () => {
             Innovative communication solutions for a dynamic future.
           </p>
           <div className="hero-buttons">
-            <Button variant="primary" size="lg" href="#/About">
+            <Button className="hero-buttons" variant="primary" size="lg" href="#/About">
               Discover More
             </Button>
-            <Button variant="outline-light" size="lg" href="#/Services">
+            <Button className="hero-buttons" variant="outline-light" size="lg" href="#/Services">
               Our Services
             </Button>
           </div>
