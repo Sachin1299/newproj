@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/newproj/static/css/main.f4f2b5ce.css",
-    "main.js": "/newproj/static/js/main.0c03897c.js",
+    "main.css": "/newproj/static/css/main.164c7710.css",
+    "main.js": "/newproj/static/js/main.a11df8c1.js",
     "static/js/453.9063c874.chunk.js": "/newproj/static/js/453.9063c874.chunk.js",
     "static/media/Customer Service and Web Development팀.png": "/newproj/static/media/Customer Service and Web Development팀.ec8d23100aab9136384a.png",
     "static/media/background.png": "/newproj/static/media/background.b05c8e29604eedec7e05.png",
     "static/media/wilhelm-gunkel-igyzxP_eiDI-unsplash.jpg": "/newproj/static/media/wilhelm-gunkel-igyzxP_eiDI-unsplash.366ca55e085e89609a94.jpg",
     "static/media/z4jsw9sq.png": "/newproj/static/media/z4jsw9sq.00b206e753415312b239.png",
     "index.html": "/newproj/index.html",
-    "main.f4f2b5ce.css.map": "/newproj/static/css/main.f4f2b5ce.css.map",
-    "main.0c03897c.js.map": "/newproj/static/js/main.0c03897c.js.map",
+    "main.164c7710.css.map": "/newproj/static/css/main.164c7710.css.map",
+    "main.a11df8c1.js.map": "/newproj/static/js/main.a11df8c1.js.map",
     "453.9063c874.chunk.js.map": "/newproj/static/js/453.9063c874.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4f2b5ce.css",
-    "static/js/main.0c03897c.js"
+    "static/css/main.164c7710.css",
+    "static/js/main.a11df8c1.js"
   ]
 }
