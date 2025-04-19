@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
+/* Reset default spacing and ensure 100% sizing */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Apply to all elements to avoid unexpected margin/padding issues */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

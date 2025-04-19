@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "../style/about.css";
-import supportimg from "../img/Customer Service and Web Development팀.png"
-
+// import supportimg from "../img/Customer Service and Web Development팀.png"
+import supportimg from "../img/women-talking-over-phone.png"
 const About = () => {
   return (
     <div className="about-page">

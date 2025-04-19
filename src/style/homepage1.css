@@ -7,12 +7,13 @@ body {
   /* HERO SECTION */
   .hero-section {
     position: relative;
-    background: url("https://source.unsplash.com/1600x900/?technology,office") no-repeat center center/cover;
+    background: url("../img/women-talking-over-phone.png") no-repeat center center/cover;
     height: 89vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    width: 100%;
   }
   
   .hero-overlay {
@@ -21,7 +22,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(37 49 51 / 89%);
     z-index: 1;
   }
   
@@ -31,6 +32,7 @@ body {
     text-align: center;
     color: #fff;
     padding: 0 1rem;
+  
   }
   
   .hero-title {
@@ -76,16 +78,19 @@ body {
   .features-section {
     padding: 4rem 0;
     background: #f9f9f9;
+    width: 100%;
   }
   
   .section-title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    
   }
   
   .section-subtitle {
     font-size: 1.2rem;
     color: #777;
+    
   }
   
   .feature-card {
@@ -118,6 +123,7 @@ body {
   .services-section {
     padding: 4rem 0;
     background: #fff;
+    width: 100%;
   }
   
   .service-card {
@@ -134,6 +140,7 @@ body {
   .testimonials-section {
     padding: 4rem 0;
     background: #f1f1f1;
+    width: 100%;
   }
   
   .testimonial-item {
@@ -155,6 +162,7 @@ body {
     background: #343a40;
     color: #fff;
     padding: 1.5rem 0;
+    width: 100%;
   }
   
   .footer-section a {
@@ -179,6 +187,7 @@ body {
     padding: 4rem 0;
     background: linear-gradient(135deg, #eef2f3, #f9fbfd);
     text-align: center;
+    width: 100%;
   }
   
   .highlight-title {
