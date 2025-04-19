@@ -190,194 +190,236 @@
 //   );
 // };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from "react";
+// import {
+//   Container,
+//   Row,
+//   Col,
+//   Button,
+//   Card,
+//   Carousel,
+// } from "react-bootstrap";
+// import "../style/homepage1.css"; // Import the custom CSS file
+// import wilhelmImage from "../img/wilhelm-gunkel-igyzxP_eiDI-unsplash.jpg";
+// import FeaturesHighlight from "../Components/FeaturesHighlight";
+// const HomePage = () => {
+//   return (
+//     <>
+//       {/* HERO SECTION */}
+//       <section className="hero-section">
+//         <div className="hero-overlay"></div>
+//         <Container className="hero-content">
+//           <h1 className="hero-title">Welcome to SupportSphere</h1>
+//           <p className="hero-subtitle">
+//             Innovative communication solutions for a dynamic future.
+//           </p>
+//           <div className="hero-buttons">
+//             <Button className="hero-buttons" variant="primary" size="lg" href="#/About">
+//               Discover More
+//             </Button>
+//             <Button className="hero-buttons" variant="outline-light" size="lg" href="#/Services">
+//               Our Services
+//             </Button>
+//           </div>
+//         </Container>
+//       </section>
+
+//       {/* FEATURES SECTION */}
+//       <section className="features-section">
+//         <Container>
+//           <Row className="text-center mb-5">
+//             <Col>
+//               <h2 className="section-title">Why Choose Us?</h2>
+//               <p className="section-subtitle">
+//                 Innovation | Agility | Customer-Centric Solutions
+//               </p>
+//             </Col>
+//           </Row>
+//           <Row>
+//             <Col md={4}>
+//               <Card className="feature-card">
+//                 <Card.Body>
+//                   <Card.Title>Innovative Technology</Card.Title>
+//                   <Card.Text>
+//                     Cutting-edge solutions leveraging the latest advancements to
+//                     drive efficiency.
+//                   </Card.Text>
+//                 </Card.Body>
+//               </Card>
+//             </Col>
+//             <Col md={4}>
+//               <Card className="feature-card">
+//                 <Card.Body>
+//                   <Card.Title>Agile & Adaptive</Card.Title>
+//                   <Card.Text>
+//                     Rapid response to market demands ensuring your business stays
+//                     ahead.
+//                   </Card.Text>
+//                 </Card.Body>
+//               </Card>
+//             </Col>
+//             <Col md={4}>
+//               <Card className="feature-card">
+//                 <Card.Body>
+//                   <Card.Title>Customer Centric</Card.Title>
+//                   <Card.Text>
+//                     Solutions designed with you in mind, ensuring personalized
+//                     service.
+//                   </Card.Text>
+//                 </Card.Body>
+//               </Card>
+//             </Col>
+//           </Row>
+//         </Container>
+//       </section>
+//       <FeaturesHighlight/>
+//       {/* SERVICES SECTION */}
+//       <section className="services-section">
+//         <Container>
+//           <Row className="text-center mb-5">
+//             <Col>
+//               <h2 className="section-title">Our Services</h2>
+//               <p className="section-subtitle">
+//                 Explore our suite of innovative communication solutions.
+//               </p>
+//             </Col>
+//           </Row>
+//           <Row>
+//             {[1, 2, 3, 4].map((service, index) => (
+//               <Col md={3} sm={6} key={index}>
+//                 <Card className="service-card">
+//                   <Card.Img
+//                     variant="top"
+//                     src={wilhelmImage}
+//                   />
+//                   <Card.Body>
+//                     <Card.Title>Service {index + 1}</Card.Title>
+//                     <Card.Text>
+//                       Brief description of service {index + 1}. Innovative, efficient,
+//                       and tailored to your needs.
+//                     </Card.Text>
+//                     <Button variant="primary" size="sm" href="/services">
+//                       Learn More
+//                     </Button>
+//                   </Card.Body>
+//                 </Card>
+//               </Col>
+//             ))}
+//           </Row>
+//         </Container>
+//       </section>
+
+//       {/* TESTIMONIALS SECTION */}
+//       <section className="testimonials-section">
+//         <Container>
+//           <Row className="text-center mb-5">
+//             <Col>
+//               <h2 className="section-title">Testimonials</h2>
+//               <p className="section-subtitle">
+//                 Hear from our satisfied clients.
+//               </p>
+//             </Col>
+//           </Row>
+//           <Carousel>
+//             <Carousel.Item>
+//               <Container className="testimonial-item text-center">
+//                 <p className="testimonial-text">
+//                   "SupportSphere transformed the way we communicate. Truly groundbreaking
+//                   technology!"
+//                 </p>
+//                 <h5 className="testimonial-author">
+//                   John Doe, CEO, Example Inc.
+//                 </h5>
+//               </Container>
+//             </Carousel.Item>
+//             <Carousel.Item>
+//               <Container className="testimonial-item text-center">
+//                 <p className="testimonial-text">
+//                   "Their agile approach and customer-first mindset made all the
+//                   difference."
+//                 </p>
+//                 <h5 className="testimonial-author">
+//                   Jane Smith, Founder, TechStart
+//                 </h5>
+//               </Container>
+//             </Carousel.Item>
+//             <Carousel.Item>
+//               <Container className="testimonial-item text-center">
+//                 <p className="testimonial-text">
+//                   "Reliable, efficient, and innovative. I highly recommend SupportSphere."
+//                 </p>
+//                 <h5 className="testimonial-author">
+//                   Alex Johnson, Director, Innovate LLC
+//                 </h5>
+//               </Container>
+//             </Carousel.Item>
+//           </Carousel>
+//         </Container>
+//       </section>
+
+//       {/* FOOTER SECTION */}
+//       <footer className="footer-section">
+//         <Container>
+//           <Row>
+//             <Col md={6} className="footer-about">
+//               <h5>SupportSphere</h5>
+//               <p>Innovative communication solutions for a dynamic future.</p>
+//             </Col>
+//             <Col md={6} className="footer-links text-md-end">
+//               <a href="/about">About Us</a> |{" "}
+//               <a href="/services">Services</a> |{" "}
+//               <a href="/contact">Contact</a>
+//             </Col>
+//           </Row>
+//           <Row className="mt-3">
+//             <Col className="text-center">
+//               &copy; {new Date().getFullYear()} SupportSphere. All Rights Reserved.
+//             </Col>
+//           </Row>
+//         </Container>
+//       </footer>
+//     </>
+//   );
+// };
+
 // export default HomePage;
+
+
+
+
+
+
+
+
 import React from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  Card,
-  Carousel,
-} from "react-bootstrap";
-import "../style/homepage1.css"; // Import the custom CSS file
-import wilhelmImage from "../img/wilhelm-gunkel-igyzxP_eiDI-unsplash.jpg";
+import HeroSection from "../Components/HeroSection";
+import FeaturesSection from "../Components/FeaturesSection";
+import FeaturesHighlight from "../Components/FeaturesHighlight";
+import ServicesSection from "../Components/ServicesSection";
+import TestimonialsSection from "../Components/TestimonialsSection";
+
+
 const HomePage = () => {
   return (
     <>
-      {/* HERO SECTION */}
-      <section className="hero-section">
-        <div className="hero-overlay"></div>
-        <Container className="hero-content">
-          <h1 className="hero-title">Welcome to SupportSphere</h1>
-          <p className="hero-subtitle">
-            Innovative communication solutions for a dynamic future.
-          </p>
-          <div className="hero-buttons">
-            <Button className="hero-buttons" variant="primary" size="lg" href="#/About">
-              Discover More
-            </Button>
-            <Button className="hero-buttons" variant="outline-light" size="lg" href="#/Services">
-              Our Services
-            </Button>
-          </div>
-        </Container>
-      </section>
-
-      {/* FEATURES SECTION */}
-      <section className="features-section">
-        <Container>
-          <Row className="text-center mb-5">
-            <Col>
-              <h2 className="section-title">Why Choose Us?</h2>
-              <p className="section-subtitle">
-                Innovation | Agility | Customer-Centric Solutions
-              </p>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={4}>
-              <Card className="feature-card">
-                <Card.Body>
-                  <Card.Title>Innovative Technology</Card.Title>
-                  <Card.Text>
-                    Cutting-edge solutions leveraging the latest advancements to
-                    drive efficiency.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="feature-card">
-                <Card.Body>
-                  <Card.Title>Agile & Adaptive</Card.Title>
-                  <Card.Text>
-                    Rapid response to market demands ensuring your business stays
-                    ahead.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="feature-card">
-                <Card.Body>
-                  <Card.Title>Customer Centric</Card.Title>
-                  <Card.Text>
-                    Solutions designed with you in mind, ensuring personalized
-                    service.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* SERVICES SECTION */}
-      <section className="services-section">
-        <Container>
-          <Row className="text-center mb-5">
-            <Col>
-              <h2 className="section-title">Our Services</h2>
-              <p className="section-subtitle">
-                Explore our suite of innovative communication solutions.
-              </p>
-            </Col>
-          </Row>
-          <Row>
-            {[1, 2, 3, 4].map((service, index) => (
-              <Col md={3} sm={6} key={index}>
-                <Card className="service-card">
-                  <Card.Img
-                    variant="top"
-                    src={wilhelmImage}
-                  />
-                  <Card.Body>
-                    <Card.Title>Service {index + 1}</Card.Title>
-                    <Card.Text>
-                      Brief description of service {index + 1}. Innovative, efficient,
-                      and tailored to your needs.
-                    </Card.Text>
-                    <Button variant="primary" size="sm" href="/services">
-                      Learn More
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
-      {/* TESTIMONIALS SECTION */}
-      <section className="testimonials-section">
-        <Container>
-          <Row className="text-center mb-5">
-            <Col>
-              <h2 className="section-title">Testimonials</h2>
-              <p className="section-subtitle">
-                Hear from our satisfied clients.
-              </p>
-            </Col>
-          </Row>
-          <Carousel>
-            <Carousel.Item>
-              <Container className="testimonial-item text-center">
-                <p className="testimonial-text">
-                  "SupportSphere transformed the way we communicate. Truly groundbreaking
-                  technology!"
-                </p>
-                <h5 className="testimonial-author">
-                  John Doe, CEO, Example Inc.
-                </h5>
-              </Container>
-            </Carousel.Item>
-            <Carousel.Item>
-              <Container className="testimonial-item text-center">
-                <p className="testimonial-text">
-                  "Their agile approach and customer-first mindset made all the
-                  difference."
-                </p>
-                <h5 className="testimonial-author">
-                  Jane Smith, Founder, TechStart
-                </h5>
-              </Container>
-            </Carousel.Item>
-            <Carousel.Item>
-              <Container className="testimonial-item text-center">
-                <p className="testimonial-text">
-                  "Reliable, efficient, and innovative. I highly recommend SupportSphere."
-                </p>
-                <h5 className="testimonial-author">
-                  Alex Johnson, Director, Innovate LLC
-                </h5>
-              </Container>
-            </Carousel.Item>
-          </Carousel>
-        </Container>
-      </section>
-
-      {/* FOOTER SECTION */}
-      <footer className="footer-section">
-        <Container>
-          <Row>
-            <Col md={6} className="footer-about">
-              <h5>SupportSphere</h5>
-              <p>Innovative communication solutions for a dynamic future.</p>
-            </Col>
-            <Col md={6} className="footer-links text-md-end">
-              <a href="/about">About Us</a> |{" "}
-              <a href="/services">Services</a> |{" "}
-              <a href="/contact">Contact</a>
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col className="text-center">
-              &copy; {new Date().getFullYear()} SupportSphere. All Rights Reserved.
-            </Col>
-          </Row>
-        </Container>
-      </footer>
+      <HeroSection />
+      <FeaturesSection />
+      <FeaturesHighlight />
+      <ServicesSection />
+      <TestimonialsSection />
     </>
   );
 };

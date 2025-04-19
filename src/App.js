@@ -10,15 +10,16 @@ import Enquiry from './Pages/Enquiry';
 import ContactUs from './Pages/ContactUs';
 import Careers from './Pages/Careers';
 import './style/Custom.css'
+import Footer from './Components/Footer';
 function App() {
   return (
     <>
    
     <HashRouter>
-    <div className='customheader'>
+  
     <TopNavbar />
     <CustomNavbar/>
-    </div>
+  
     <Routes>
     
       <Route path='/' element={<HomePage/>}/>
@@ -29,6 +30,7 @@ function App() {
       <Route path='/Careers' element={<Careers/>}/> 
 
     </Routes>
+    <Footer />
     </HashRouter>
     </>
   );
