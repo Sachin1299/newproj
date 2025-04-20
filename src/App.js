@@ -7,7 +7,6 @@ import HomePage from './Pages/HomePage';
 import About from './Pages/About';
 import Services from './Pages/Services';
 import Enquiry from './Pages/Enquiry';
-import ContactUs from './Pages/ContactUs';
 import Careers from './Pages/Careers';
 import './style/Custom.css'
 import Footer from './Components/Footer';
@@ -26,7 +25,6 @@ function App() {
       <Route path='/About' element={<About/>}/>
       <Route path='/Services' element={<Services/>}/>
       <Route path='/Enquiry' element={<Enquiry/>}/>
-      <Route path='/ContactUs' element={<ContactUs/>}/>
       <Route path='/Careers' element={<Careers/>}/> 
 
     </Routes>

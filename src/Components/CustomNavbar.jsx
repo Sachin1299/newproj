@@ -100,7 +100,6 @@ const CustomNavbar = () => {
             </NavDropdown>
             </div>
             <Nav.Link as={NavLink} to="/Enquiry">Enquiry</Nav.Link>
-            <Nav.Link as={NavLink} to="/ContactUs">Contact Us</Nav.Link>
             <Nav.Link as={NavLink} to="/Careers">Careers</Nav.Link>
           </Nav>
         </Navbar.Collapse>
