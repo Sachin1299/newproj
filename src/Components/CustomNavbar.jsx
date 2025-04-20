@@ -34,14 +34,17 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import '../style/Custom.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { NavDropdown } from 'react-bootstrap';
 
 
 const CustomNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [hover, setHover] = useState(false);
-
+  const navigate = useNavigate();
+  const serviceroute = ()=>{
+    navigate("Services")
+  }
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 10) {
@@ -79,6 +82,7 @@ const CustomNavbar = () => {
               className={`custom-dropdown nav-item ${hover ? 'show' : ''}`}
               show={hover}
               menuVariant="light"
+              onClick={()=>serviceroute()}
             >
               <div className="services-dropdown-wrapper">
                 <div className="dropdown-grid">

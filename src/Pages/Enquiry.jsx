@@ -1,3 +1,4 @@
+//ELKstaging@123
 // import React, { useState } from "react";
 // import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
 // import "../style/enquiry.css"; // Custom CSS for animation and style
@@ -298,8 +299,7 @@
 // export default Enquiry;
 
 
-
-import React from "react";
+import React, { useState } from "react"; // Add useState
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import {
@@ -316,6 +316,39 @@ import "../style/enquiry.css";
 import EnquiryImg from "../img/FocusedOffice.png"; // Example image
 
 const Enquiry = () => {
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault(); // prevent default redirect
+    setIsLoading(true);
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xrbpnwpo", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        form.reset();
+      } else {
+        alert("Something went wrong. Please try again later.");
+      }
+    } catch (error) {
+      alert("Error submitting form!");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="enquiry-section">
       <Container className="py-5">
@@ -339,23 +372,37 @@ const Enquiry = () => {
               className="contact-form-container"
             >
               <h2 className="mb-4 text-primary">Get in Touch</h2>
-              <Form>
-                <Form.Group controlId="formName" className="mb-3">
-                  <Form.Control type="text" placeholder="Your Name" required />
-                </Form.Group>
+              {isSubmitted ? (
+                <div className="alert alert-success text-center">
+                  🎉 Thank you! Your message has been sent.
+                </div>
+              ) : (
+                <Form onSubmit={handleFormSubmit}>
+                  <Form.Group className="mb-3">
+                    <Form.Control type="text" name="name" placeholder="Your Name" required />
+                  </Form.Group>
 
-                <Form.Group controlId="formEmail" className="mb-3">
-                  <Form.Control type="email" placeholder="Your Email" required />
-                </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Control type="email" name="email" placeholder="Your Email" required />
+                  </Form.Group>
 
-                <Form.Group controlId="formMessage" className="mb-3">
-                  <Form.Control as="textarea" rows={4} placeholder="Your Message" required />
-                </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Control
+                      as="textarea"
+                      name="message"
+                      rows={4}
+                      placeholder="Your Message"
+                      required
+                    />
+                  </Form.Group>
 
-                <Button variant="primary" type="submit" className="w-100">
-                  Submit
-                </Button>
-              </Form>
+                  <Button variant="primary" type="submit" className="w-100" disabled={isLoading}>
+                    {isLoading ? "Sending..." : "Submit"}
+                  </Button>
+                </Form>
+              )}
+
+
             </motion.div>
           </Col>
         </Row>

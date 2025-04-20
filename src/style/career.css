@@ -1,0 +1,39 @@
+.resume-upload-form {
+    background-color: #ffffff;
+    border-radius: 12px;
+  }
+  
+  .resume-upload-form .form-control {
+    border-radius: 8px;
+  }
+  
+  .job-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .perk-box {
+    font-size: 1.1rem;
+    background: #f8f9fa;
+    border: 1px solid #eaeaea;
+  }
+  .no-openings {
+    background-color: #fefefe;
+    border: 1px solid #eee;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+  
+  .no-openings h4 {
+    font-weight: 600;
+  }
+  
+  .no-openings button {
+    border-radius: 8px;
+  }
+  

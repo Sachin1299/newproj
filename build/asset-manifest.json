@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/newproj/static/css/main.139d3954.css",
-    "main.js": "/newproj/static/js/main.e6818732.js",
+    "main.css": "/newproj/static/css/main.088d239f.css",
+    "main.js": "/newproj/static/js/main.7ee6de03.js",
     "static/js/453.9063c874.chunk.js": "/newproj/static/js/453.9063c874.chunk.js",
+    "static/media/FocusedOffice.png": "/newproj/static/media/FocusedOffice.96955017d38b33c17230.png",
     "static/media/women-talking-over-phone.png": "/newproj/static/media/women-talking-over-phone.00fb32e6dc267d132bfe.png",
     "static/media/wilhelm-gunkel-igyzxP_eiDI-unsplash.jpg": "/newproj/static/media/wilhelm-gunkel-igyzxP_eiDI-unsplash.366ca55e085e89609a94.jpg",
     "index.html": "/newproj/index.html",
-    "main.139d3954.css.map": "/newproj/static/css/main.139d3954.css.map",
-    "main.e6818732.js.map": "/newproj/static/js/main.e6818732.js.map",
+    "main.088d239f.css.map": "/newproj/static/css/main.088d239f.css.map",
+    "main.7ee6de03.js.map": "/newproj/static/js/main.7ee6de03.js.map",
     "453.9063c874.chunk.js.map": "/newproj/static/js/453.9063c874.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.139d3954.css",
-    "static/js/main.e6818732.js"
+    "static/css/main.088d239f.css",
+    "static/js/main.7ee6de03.js"
   ]
 }
