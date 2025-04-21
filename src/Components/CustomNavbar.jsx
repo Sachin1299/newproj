@@ -31,7 +31,7 @@
 
 
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import '../style/Custom.css';
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -41,10 +41,38 @@ import { NavDropdown } from 'react-bootstrap';
 const CustomNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [hover, setHover] = useState(false);
+  const [navexpanded, setNavExpanded] = useState(false);
+
+  const navref = useRef(null);
   const navigate = useNavigate();
+
+
+  const handleToggle= ()=>{
+    setNavExpanded((prev)=>!prev);
+  }
+
   const serviceroute = ()=>{
     navigate("Services")
   }
+
+ const clickOutsideNav=(event)=>{
+  if(navref.current && !navref.current.contains(event.target)){
+    setNavExpanded(false);
+  }
+ };
+
+ useEffect(()=>{
+    if(navexpanded){
+      document.addEventListener('mousedown',clickOutsideNav);
+    }
+    else{
+      document.removeEventListener('mousedown',clickOutsideNav);
+    }
+    return ()=>{
+      document.removeEventListener('mousedown',clickOutsideNav);
+    }
+ },[navexpanded])
+ 
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 10) {
@@ -60,6 +88,9 @@ const CustomNavbar = () => {
   return (
     <Navbar
       expand="lg"
+      onToggle={handleToggle}
+      expanded = {navexpanded}
+      ref={navref}
       className={`custom-navbar shadow-sm ${scrolled ? 'scrolled-navbar' : ''}`}
     >
       <Container>

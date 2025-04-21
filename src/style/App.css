@@ -62,7 +62,7 @@
 }
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   /* background-image: url('../img/women\ talking\ over\ phone.png'); */
   background-repeat: no-repeat;
   background-size: cover;
@@ -79,13 +79,7 @@ body {
     background-attachment: scroll; /* prevents choppy scroll on phones */
   }
 }
-.custom-navbar {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  padding: 0.8rem 1rem;
-  border-bottom: 1px solid #e0e0e0;
-  z-index: 999;
-}
+
 
 .navbar-logo .logo-text {
   font-size: 1.5rem;

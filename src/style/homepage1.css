@@ -7,7 +7,7 @@ body {
   /* HERO SECTION */
   .hero-section {
     position: relative;
-    background: url("../img/women-talking-over-phone.png") no-repeat center center/cover;
+    background: url("../img/herosection.png") no-repeat center center/cover;
     height: 89vh;
     display: flex;
     align-items: center;
@@ -238,17 +238,7 @@ body {
     color: #1985a1;
   }
   
-  .badge-text {
-    position: absolute;
-    top: -10px;
-    right: -15px;
-    background: #ff5722;
-    color: white;
-    padding: 2px 8px;
-    font-size: 0.75rem;
-    border-radius: 50%;
-    animation: bounce 1.2s infinite;
-  }
+ 
   
   @keyframes popUp {
     0% {

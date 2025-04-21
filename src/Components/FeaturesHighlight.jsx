@@ -22,7 +22,7 @@ const FeaturesHighlight = () => {
           <Col md={3} sm={6} className="feature-item">
             <div className="feature-icon-wrapper position-relative">
               <FaHeadset className="feature-icon" />
-              <span className="badge-text">24</span>
+             
             </div>
             <h5 className="fw-bold">24/7 Support</h5>
           </Col>
