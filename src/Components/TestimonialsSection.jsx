@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
-
+ 
 const testimonials = [
   {
     text: "SupportSphere transformed the way we communicate. Truly groundbreaking technology!",
@@ -17,20 +17,20 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => (
-  <section className="testimonials-section">
+  <section className="home-testimonials-section">
     <Container>
       <Row className="text-center mb-5">
         <Col>
-          <h2 className="section-title">Testimonials</h2>
-          <p className="section-subtitle">Hear from our satisfied clients.</p>
+          <h2 className="home-section-title">Testimonials</h2>
+          <p className="home-section-subtitle">Hear from our satisfied clients.</p>
         </Col>
       </Row>
       <Carousel>
         {testimonials.map((testimonial, index) => (
           <Carousel.Item key={index}>
-            <Container className="testimonial-item text-center">
-              <p className="testimonial-text">"{testimonial.text}"</p>
-              <h5 className="testimonial-author">{testimonial.author}</h5>
+            <Container className=".home-testimonial-item text-center">
+              <p className="home-testimonial-text">"{testimonial.text}"</p>
+              <h5 className="home-testimonial-author">{testimonial.author}</h5>
             </Container>
           </Carousel.Item>
         ))}

@@ -1,17 +1,45 @@
 import React from "react";
-import { Container, Button } from "react-bootstrap";
-import "../style/homepage1.css"
+import { Carousel, Container, Button } from "react-bootstrap";
+import "../style/homepage1.css";
+
 const HeroSection = () => (
-  <section className="hero-section">
-    <div className="hero-overlay"></div>
-    <Container className="hero-content">
-      <h1 className="hero-title">Welcome to SupportSphere</h1>
-      <p className="hero-subtitle">Innovative communication solutions for a dynamic future.</p>
-      <div className="hero-buttons">
-        <Button className="hero-buttons"variant="primary" size="lg" href="#/About">Discover More</Button>
-        <Button className="hero-buttons"variant="outline-light" size="lg" href="#/Services">Our Services</Button>
-      </div>
-    </Container>
+  <section className="hero-carousel-section">
+    <Carousel 
+    controls={false}
+    indicators={false}
+    fade
+    interval={8000}
+    pause={false}
+    touch={false}
+    keyboard={false}
+    slide>
+      <Carousel.Item>
+        <div className="hero-slide bg1">
+          <div className="hero-overlay" />
+          <Container className="home-hero-content text-center">
+            <h1 className="home-hero-title">Empowering Your Communication</h1>
+            <p className="home-hero-subtitle ">Reliable, scalable, and tailored for your business.</p>
+            <div className="home-hero-buttons">
+              <Button variant="primary" size="lg" href="#/About">Learn More</Button>
+              <Button variant="outline-light" size="lg" href="#/Services">Our Services</Button>
+            </div>
+          </Container>
+        </div>
+      </Carousel.Item>
+      <Carousel.Item>
+        <div className="hero-slide bg2">
+          <div className="hero-overlay" />
+          <Container className="home-hero-content text-center">
+            <h1 className="home-hero-title">Advanced Call Solutions</h1>
+            <p className="home-hero-subtitle ">Seamless connections. Smarter business outcomes.</p>
+            <div className="home-hero-buttons">
+              <Button variant="primary" size="lg" href="#/About">Explore Features</Button>
+              <Button variant="outline-light" size="lg" href="#/Services">View Services</Button>
+            </div>
+          </Container>
+        </div>
+      </Carousel.Item>
+    </Carousel>
   </section>
 );
 

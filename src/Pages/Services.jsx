@@ -31,18 +31,19 @@ const Services = () => {
                     <img src={serviceimg} alt="Communication Solutions" />
                 </div>
             </div>
-
-            <h1 className="services-title">Our Services</h1>
-            <div className="services-grid">
-                {services.map((service, index) => (
-                    <div key={index} className="service-card">
-                        <h3>{service}</h3>
-                        <p>
-                            {service} is one of our key offerings that helps businesses enhance productivity,
-                            optimize communication and deliver top-notch customer support.
-                        </p>
-                    </div>
-                ))}
+            <div className='services-div'>
+                <h1 className="services-title">Our Services</h1>
+                <div className="services-grid">
+                    {services.map((service, index) => (
+                        <div key={index} className="service-card">
+                            <h3>{service}</h3>
+                            <p>
+                                {service} is one of our key offerings that helps businesses enhance productivity,
+                                optimize communication and deliver top-notch customer support.
+                            </p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
