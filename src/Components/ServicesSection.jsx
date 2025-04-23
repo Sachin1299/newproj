@@ -12,20 +12,54 @@ const ServicesSection = () => (
         </Col>
       </Row>
       <Row>
-        {[1, 2, 3, 4].map((service, index) => (
-          <Col md={3} sm={6} key={index}>
+          <Col md={3} sm={6}>
             <Card className="home-service-card">
               <Card.Img variant="top" src={wilhelmImage} />
               <Card.Body>
-                <Card.Title>Service {index + 1}</Card.Title>
+                <Card.Title>Concurrent Call Handling</Card.Title>
                 <Card.Text>
-                  Brief description of service {index + 1}. Innovative, efficient, and tailored to your needs.
+                Concurrent Call Handling is one of our key offerings that helps businesses enhance productivity, optimize communication and deliver top-notch customer support.
                 </Card.Text>
-                <Button variant="primary" size="sm" href="/services">Learn More</Button>
+                <Button variant="primary" size="sm" href="#/Services">Learn More</Button>
               </Card.Body>
             </Card>
           </Col>
-        ))}
+          <Col md={3} sm={6}>
+            <Card className="home-service-card">
+              <Card.Img variant="top" src={wilhelmImage} />
+              <Card.Body>
+                <Card.Title>Intercom & Call Transfer</Card.Title>
+                <Card.Text>
+                Intercom & Call Transfer is one of our key offerings that helps businesses enhance productivity, optimize communication and deliver top-notch customer support.
+                </Card.Text>
+                <Button variant="primary" size="sm" href="#/Services">Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={3} sm={6}>
+            <Card className="home-service-card">
+              <Card.Img variant="top" src={wilhelmImage} />
+              <Card.Body>
+                <Card.Title>Call Center Solutions</Card.Title>
+                <Card.Text>
+                Call Center Solutions is one of our key offerings that helps businesses enhance productivity, optimize communication and deliver top-notch customer support.
+                </Card.Text>
+                <Button variant="primary" size="sm" href="#/Services">Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={3} sm={6}>
+            <Card className="home-service-card">
+              <Card.Img variant="top" src={wilhelmImage} />
+              <Card.Body>
+                <Card.Title>Voicemail & Call History</Card.Title>
+                <Card.Text>
+                Voicemail & Call History is one of our key offerings that helps businesses enhance productivity, optimize communication and deliver top-notch customer support.
+                </Card.Text>
+                <Button variant="primary" size="sm" href="#/Services">Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
       </Row>
     </Container>
   </section>

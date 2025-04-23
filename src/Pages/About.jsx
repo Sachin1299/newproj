@@ -52,7 +52,7 @@ const About = () => {
               <Card.Body>
                 <Card.Title>🚀 Innovation at Competitive Costs</Card.Title>
                 <Card.Text>
-                  Startups like Suvian Tech LLP thrive on innovation. By adopting modern and disruptive technologies, we deliver high-performing and cost-effective communication solutions. CallTech, powered by Suvian's startup energy, offers advanced communication tools without breaking the bank.
+                  Startups like Suvian Tech LLP thrive on innovation. By adopting modern and disruptive technologies, we deliver high-performing and cost-effective communication solutions. SupportSphere, powered by Suvian's startup energy, offers advanced communication tools without breaking the bank.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -63,7 +63,7 @@ const About = () => {
               <Card.Body>
                 <Card.Title>⚡ Agility & Adaptability</Card.Title>
                 <Card.Text>
-                  Our startup DNA allows us to stay ahead of market shifts and adapt quickly to your changing needs. Whether it's upgrading technology or customizing features, CallTech responds with speed and flexibility to keep you ahead.
+                  Our startup DNA allows us to stay ahead of market shifts and adapt quickly to your changing needs. Whether it's upgrading technology or customizing features, SupportSphere responds with speed and flexibility to keep you ahead.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -74,7 +74,7 @@ const About = () => {
               <Card.Body>
                 <Card.Title>💡 Customer-Centric Approach</Card.Title>
                 <Card.Text>
-                  We don’t just build software — we solve real problems. Our customer-first attitude ensures that every CallTech solution is tailored to enhance user experience, simplify workflows, and meet actual business needs affordably.
+                  We don’t just build software — we solve real problems. Our customer-first attitude ensures that every SupportSphere solution is tailored to enhance user experience, simplify workflows, and meet actual business needs affordably.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -96,7 +96,7 @@ const About = () => {
               <Card.Body>
                 <Card.Title>🔧 Flexible & Tailor-Made Solutions</Card.Title>
                 <Card.Text>
-                  Unlike larger corporations, our flexibility lets us build truly custom solutions. Whether you need specific workflows or integrations, CallTech molds its services to fit your unique business environment.
+                  Unlike larger corporations, our flexibility lets us build truly custom solutions. Whether you need specific workflows or integrations, SupportSphere molds its services to fit your unique business environment.
                 </Card.Text>
               </Card.Body>
             </Card>
