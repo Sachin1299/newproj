@@ -1,45 +1,62 @@
 import React from "react";
-import { Carousel, Container, Button } from "react-bootstrap";
 import "../style/homepage1.css";
 
 const HeroSection = () => (
-  <section className="hero-carousel-section">
-    <Carousel 
-    controls={false}
-    indicators={false}
-    fade
-    interval={8000}
-    pause={false}
-    touch={false}
-    keyboard={false}
-    slide>
-      <Carousel.Item>
-        <div className="hero-slide bg1">
-          <div className="hero-overlay" />
-          <Container className="home-hero-content text-center">
-            <h1 className="home-hero-title">Empowering Your Communication</h1>
-            <p className="home-hero-subtitle ">Reliable, scalable, and tailored for your business.</p>
-            <div className="home-hero-buttons">
-              <Button variant="primary" size="lg" href="#/About">Learn More</Button>
-              <Button variant="outline-light" size="lg" href="#/Services">Our Services</Button>
-            </div>
-          </Container>
+  <section className="hero-section homepage-section" id="hero">
+    {/* Animated background elements */}
+    <div className="hero-bg-grid" />
+    <div className="hero-orb hero-orb--1" />
+    <div className="hero-orb hero-orb--2" />
+    <div className="hero-orb hero-orb--3" />
+
+    <div className="hero-content">
+      <div className="hero-badge">
+        <span className="hero-badge-dot" />
+        Trusted Business Outsourcing Partner
+      </div>
+
+      <h1 className="hero-title">
+        Outsource <span className="highlight">Smarter.</span>{" "}
+        Operate <span className="highlight">Better.</span>{" "}
+        Grow <span className="highlight">Faster.</span>
+      </h1>
+
+      <p className="hero-subtitle">
+        At Bhagirath Solution, we help businesses simplify operations, improve
+        productivity, and build capacity through reliable outsourcing and
+        technology services — from IT support and customer service to business
+        administration, virtual assistance, and lead generation.
+      </p>
+
+      <div className="hero-buttons">
+        <a href="#/Enquiry" className="btn-hero-primary">
+          Get Started Today
+          <span>→</span>
+        </a>
+        <a href="#/Services" className="btn-hero-secondary">
+          Explore Our Services
+        </a>
+      </div>
+
+      <div className="hero-stats">
+        <div className="hero-stat">
+          <span className="hero-stat-number">50+</span>
+          <span className="hero-stat-label">Clients Served</span>
         </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="hero-slide bg2">
-          <div className="hero-overlay" />
-          <Container className="home-hero-content text-center">
-            <h1 className="home-hero-title">Advanced Call Solutions</h1>
-            <p className="home-hero-subtitle ">Seamless connections. Smarter business outcomes.</p>
-            <div className="home-hero-buttons">
-              <Button variant="primary" size="lg" href="#/About">Explore Features</Button>
-              <Button variant="outline-light" size="lg" href="#/Services">View Services</Button>
-            </div>
-          </Container>
+        <div className="hero-stat">
+          <span className="hero-stat-number">98%</span>
+          <span className="hero-stat-label">Client Satisfaction</span>
         </div>
-      </Carousel.Item>
-    </Carousel>
+        <div className="hero-stat">
+          <span className="hero-stat-number">24/7</span>
+          <span className="hero-stat-label">Support Available</span>
+        </div>
+        <div className="hero-stat">
+          <span className="hero-stat-number">5+</span>
+          <span className="hero-stat-label">Years Experience</span>
+        </div>
+      </div>
+    </div>
   </section>
 );
 

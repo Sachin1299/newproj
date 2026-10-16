@@ -8,7 +8,7 @@
 //     <Navbar expand="lg" className="custom-navbar shadow-sm">
 //       <Container>
 //         <Navbar.Brand href="#" className="navbar-logo">
-//           <span className="logo-text">BHAGIRATH IT SOLUTIONS</span>
+//           <span className="logo-text">BHAGIRATH SOLUTION</span>
 //         </Navbar.Brand>
 //         <Navbar.Toggle aria-controls="custom-navbar-nav" />
 //         <Navbar.Collapse id="custom-navbar-nav">
@@ -95,7 +95,7 @@ const CustomNavbar = () => {
     >
       <Container>
         <Navbar.Brand href="#" className="navbar-logo">
-          <span className="logo-text">BHAGIRATH IT SOLUTIONS</span>
+          <span className="logo-text">BHAGIRATH SOLUTION</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="custom-navbar-nav" />
         <Navbar.Collapse id="custom-navbar-nav">

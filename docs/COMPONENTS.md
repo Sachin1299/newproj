@@ -87,12 +87,6 @@ Services shown: Concurrent Call Handling · Intercom & Call Transfer · Call Cen
 
 > ⚠️ All 4 cards use the same placeholder image (`wilhelm-gunkel-igyzxP_eiDI-unsplash.jpg`).
 
----
-
-## TestimonialsSection
-**File:** `TestimonialsSection.jsx`
-
-Carousel of 3 hardcoded dummy testimonials (placeholder authors).
 
 ---
 

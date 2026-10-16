@@ -7,8 +7,8 @@ const Footer = () => (
     <Container>
       <Row className="mb-4">
         <Col md={4} className="mb-4 mb-md-0">
-          <h5 className="fw-bold text-uppercase">BHAGIRATH IT SOLUTIONS</h5>
-          <p>Innovative communication solutions for a dynamic future.</p>
+          <h5 className="fw-bold text-uppercase">BHAGIRATH SOLUTION</h5>
+          <p>Outsource Smarter. Operate Better. Grow Faster.</p>
         </Col>
 
         <Col md={4} className="mb-4 mb-md-0">
@@ -24,18 +24,17 @@ const Footer = () => (
         <Col md={4}>
           <h6 className="fw-semibold text-uppercase mb-2">Our Address</h6>
           <address className="mb-0">
-            BHAGIRATH IT SOLUTIONS Pvt. Ltd.<br />
-            123 Tech Valley Road,<br />
-            Bengaluru, Karnataka - 560001<br />
+            BHAGIRATH SOLUTION<br />
+            Bhopal, Madhya Pradesh - 462023<br />
             India<br />
-            <a href="mailto:support@BHAGIRATH IT SOLUTIONS.com" className="footer-link">support@BHAGIRATH IT SOLUTIONS.com</a>
+            <a href="mailto:support@bhagirathitsolutions.co.in" className="footer-link">support@bhagirathitsolutions.co.in</a>
           </address>
         </Col>
       </Row>
 
       <Row>
         <Col className="text-center">
-          <small>&copy; {new Date().getFullYear()} BHAGIRATH IT SOLUTIONS. All Rights Reserved.</small>
+          <small>&copy; {new Date().getFullYear()} BHAGIRATH SOLUTION. All Rights Reserved.</small>
         </Col>
       </Row>
     </Container>

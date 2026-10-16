@@ -1,65 +1,100 @@
 import React from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import wilhelmImage from "../img/wilhelm-gunkel-igyzxP_eiDI-unsplash.jpg";
- 
+import { Container, Row, Col } from "react-bootstrap";
+import {
+  FaLaptopCode,
+  FaClipboardList,
+  FaHeadset,
+  FaChartLine,
+  FaCheckCircle,
+} from "react-icons/fa";
+import "../style/homepage1.css";
+
+const services = [
+  {
+    icon: <FaLaptopCode />,
+    color: "teal",
+    title: "Technology Support",
+    text: "Practical, responsive IT assistance designed to keep your business systems, applications, and digital infrastructure running smoothly around the clock. We handle everything from helpdesk queries and system monitoring to software configuration and troubleshooting.",
+    features: [
+      "IT Helpdesk & Technical Support",
+      "System Monitoring & Maintenance",
+      "Software Configuration & Updates",
+      "Infrastructure Management",
+    ],
+  },
+  {
+    icon: <FaClipboardList />,
+    color: "blue",
+    title: "Business Administration",
+    text: "Dependable, detail-oriented back-office support for the everyday tasks and workflows that keep your business running. From data entry and document management to scheduling and reporting, we take the admin burden off your shoulders.",
+    features: [
+      "Data Entry & Management",
+      "Document Processing & Filing",
+      "Scheduling & Calendar Management",
+      "Reporting & Analytics Support",
+    ],
+  },
+  {
+    icon: <FaHeadset />,
+    color: "amber",
+    title: "Customer & Helpdesk Support",
+    text: "Professional, empathetic assistance for customer enquiries, service requests, complaint resolution, and follow-ups. Our trained support agents represent your brand with care, ensuring every interaction builds trust and satisfaction.",
+    features: [
+      "Multi-Channel Customer Support",
+      "Service Request Management",
+      "Complaint Resolution & Escalation",
+      "Follow-up & Satisfaction Tracking",
+    ],
+  },
+  {
+    icon: <FaChartLine />,
+    color: "purple",
+    title: "Sales & Lead Generation",
+    text: "Strengthen and accelerate your sales pipeline with dedicated research, prospect identification, lead qualification, and strategic follow-up activities. We help your sales team focus on closing deals while we build and nurture the pipeline.",
+    features: [
+      "Prospect Research & Identification",
+      "Lead Qualification & Scoring",
+      "Outreach & Follow-up Campaigns",
+      "CRM Data Management",
+    ],
+  },
+];
+
 const ServicesSection = () => (
-  <section className="home-services-section">
+  <section className="services-section homepage-section" id="services">
     <Container>
-      <Row className="text-center mb-5">
+      <Row className="text-center mb-2">
         <Col>
-          <h2 className="home-section-title">Our Services</h2>
-          <p className="home-section-subtitle">Explore our suite of innovative communication solutions.</p>
+          <p className="section-label">What We Offer</p>
+          <h2 className="section-title">Our Core Services</h2>
+          <div className="section-accent-line" />
+          <p className="section-subtitle">
+            We provide flexible, end-to-end outsourcing solutions that help your
+            business focus on what matters most — growth, innovation, and
+            customer value.
+          </p>
         </Col>
       </Row>
-      <Row>
-          <Col md={3} sm={6}>
-            <Card className="home-service-card">
-              <Card.Img variant="top" src={wilhelmImage} />
-              <Card.Body>
-                <Card.Title>Concurrent Call Handling</Card.Title>
-                <Card.Text>
-                Concurrent Call Handling is one of our key offerings that helps businesses enhance productivity, optimize communication and deliver top-notch customer support.
-                </Card.Text>
-                <Button variant="primary" size="sm" href="#/Services">Learn More</Button>
-              </Card.Body>
-            </Card>
+      <Row className="g-4">
+        {services.map((svc, idx) => (
+          <Col lg={3} md={6} key={idx}>
+            <div className={`service-card ${svc.color}`}>
+              <div className={`service-icon-wrap ${svc.color}`}>
+                {svc.icon}
+              </div>
+              <h3 className="service-card-title">{svc.title}</h3>
+              <p className="service-card-text">{svc.text}</p>
+              <ul className="service-card-features">
+                {svc.features.map((f, i) => (
+                  <li key={i}>
+                    <FaCheckCircle className="check-icon" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </Col>
-          <Col md={3} sm={6}>
-            <Card className="home-service-card">
-              <Card.Img variant="top" src={wilhelmImage} />
-              <Card.Body>
-                <Card.Title>Intercom & Call Transfer</Card.Title>
-                <Card.Text>
-                Intercom & Call Transfer is one of our key offerings that helps businesses enhance productivity, optimize communication and deliver top-notch customer support.
-                </Card.Text>
-                <Button variant="primary" size="sm" href="#/Services">Learn More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={3} sm={6}>
-            <Card className="home-service-card">
-              <Card.Img variant="top" src={wilhelmImage} />
-              <Card.Body>
-                <Card.Title>Call Center Solutions</Card.Title>
-                <Card.Text>
-                Call Center Solutions is one of our key offerings that helps businesses enhance productivity, optimize communication and deliver top-notch customer support.
-                </Card.Text>
-                <Button variant="primary" size="sm" href="#/Services">Learn More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={3} sm={6}>
-            <Card className="home-service-card">
-              <Card.Img variant="top" src={wilhelmImage} />
-              <Card.Body>
-                <Card.Title>Voicemail & Call History</Card.Title>
-                <Card.Text>
-                Voicemail & Call History is one of our key offerings that helps businesses enhance productivity, optimize communication and deliver top-notch customer support.
-                </Card.Text>
-                <Button variant="primary" size="sm" href="#/Services">Learn More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
+        ))}
       </Row>
     </Container>
   </section>

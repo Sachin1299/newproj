@@ -14,8 +14,7 @@ HomePage
   ├── HeroSection          (full-width fade carousel × 2 slides)
   ├── FeaturesSection      ("Why Choose Us?" × 3 feature cards)
   ├── FeaturesHighlight    (icon strip × 4 highlights)
-  ├── ServicesSection      (service preview cards × 4)
-  └── TestimonialsSection  (testimonial carousel × 3)
+  └── ServicesSection      (service preview cards × 4)
 ```
 
 ---

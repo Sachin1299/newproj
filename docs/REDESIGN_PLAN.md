@@ -9,7 +9,6 @@
 ### Content Problems
 - [ ] **Brand inconsistency** — About page says "Suvian Tech LLP" but the brand is "Bhagirath IT Solutions"
 - [ ] **Dummy testimonials** — Fake names (John Doe, Jane Smith) and placeholder quotes
-- [ ] **Placeholder address** — Footer shows "123 Tech Valley Road, Bengaluru 560001" (not real)
 - [ ] **Generic service descriptions** — All 13 service cards use identical boilerplate text
 - [ ] **Identical card images** — All 4 service preview cards on the home page use the same photo
 - [ ] **Broken CTA buttons** — "Contact Us" button on About page has no route/href
