@@ -3,7 +3,7 @@ import { Container, Row, Col, Carousel } from "react-bootstrap";
  
 const testimonials = [
   {
-    text: "SupportSphere transformed the way we communicate. Truly groundbreaking technology!",
+    text: "BHAGIRATH IT SOLUTIONS transformed the way we communicate. Truly groundbreaking technology!",
     author: "John Doe, CEO, Example Inc.",
   },
   {
@@ -11,7 +11,7 @@ const testimonials = [
     author: "Jane Smith, Founder, TechStart",
   },
   {
-    text: "Reliable, efficient, and innovative. I highly recommend SupportSphere.",
+    text: "Reliable, efficient, and innovative. I highly recommend BHAGIRATH IT SOLUTIONS.",
     author: "Alex Johnson, Director, Innovate LLC",
   },
 ];

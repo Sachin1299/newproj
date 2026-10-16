@@ -8,7 +8,7 @@ const Home = () => {
       <header className="hero">
         <div className="container">
           <h1 className="display-4">
-            Welcome to <span className="fw-bold">SupportSphere</span>
+            Welcome to <span className="fw-bold">BHAGIRATH IT SOLUTIONS</span>
           </h1>
           <p className="lead">
             Revolutionizing Communication Technology with Innovation, Agility, and
@@ -23,7 +23,7 @@ const Home = () => {
             <div className="card feature-card p-4">
               <h3 className="section-title">Innovative & Cost-Effective</h3>
               <p>
-                Backed by Suvian Tech LLP, SupportSphere brings state-of-the-art
+                Backed by Suvian Tech LLP, BHAGIRATH IT SOLUTIONS brings state-of-the-art
                 communication solutions at startup-friendly prices.
               </p>
             </div>
@@ -55,7 +55,7 @@ const Home = () => {
             <div className="card feature-card p-4">
               <h3 className="section-title">High Productivity</h3>
               <p>
-                By streamlining workflows and integrating modern tech, SupportSphere
+                By streamlining workflows and integrating modern tech, BHAGIRATH IT SOLUTIONS
                 helps your team do more with less.
               </p>
             </div>
@@ -82,7 +82,7 @@ const Home = () => {
       </section>
 
       <footer className="text-center bg-light py-3">
-        <p>&copy; 2025 SupportSphere - All rights reserved.</p>
+        <p>&copy; 2025 BHAGIRATH IT SOLUTIONS - All rights reserved.</p>
       </footer>
     </div>
   );

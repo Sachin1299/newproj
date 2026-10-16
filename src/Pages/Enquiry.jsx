@@ -260,7 +260,7 @@
 //           <Col md={3} sm={6} className="mb-4">
 //             <FaEnvelope size={24} className="mb-2 text-primary" />
 //             <p className="mb-1">Email</p>
-//             <strong>support@supportsphere.com</strong>
+//             <strong>support@BHAGIRATH IT SOLUTIONS.com</strong>
 //           </Col>
 //         </Row>
 
@@ -427,7 +427,7 @@ const Enquiry = () => {
           <Col md={3} sm={6} className="mb-4">
             <FaEnvelope size={24} className="mb-2 text-primary" />
             <p className="mb-1">Email</p>
-            <strong>support@supportsphere.com</strong>
+            <strong>support@BHAGIRATH IT SOLUTIONS.com</strong>
           </Col>
         </Row>
 

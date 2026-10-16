@@ -5,8 +5,8 @@ const TopNavbar = () => {
   return (
     <div className="top-navbar">
       <div className="top-navbar-content">
-        <span>Call us: +91 1234567890</span>
-        <span>Email: support@yourcompany.com</span>
+        <span>Call us: +91 9589036973</span>
+        <span>Email: support@bhagirathitsolutions.co.in</span>
       </div>
     </div>
   );
