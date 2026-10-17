@@ -1,306 +1,5 @@
-//ELKstaging@123
-// import React, { useState } from "react";
-// import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
-// import "../style/enquiry.css"; // Custom CSS for animation and style
-
-// const Enquiry = () => {
-//   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-//   const [submitted, setSubmitted] = useState(false);
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData((prev) => ({ ...prev, [name]: value }));
-//   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     setSubmitted(true);
-//     // You can integrate email sending logic or API here
-//   };
-
-//   return (
-//     <div className="enquiry-section">
-//       <Container className="py-5">
-//         <Row className="justify-content-center text-center mb-4 fade-in-top">
-//           <Col lg={8}>
-//             <h2 className="display-5 fw-bold">Get In Touch</h2>
-//             <p className="text-muted">We're here to help and answer any question you might have. We look forward to hearing from you!</p>
-//           </Col>
-//         </Row>
-
-//         <Row className="justify-content-center slide-up">
-//           <Col md={8} lg={6}>
-//             {submitted ? (
-//               <Alert variant="success" className="text-center">
-//                 Thank you for contacting us! We'll get back to you shortly.
-//               </Alert>
-//             ) : (
-//               <Form onSubmit={handleSubmit} className="enquiry-form p-4 shadow rounded">
-//                 <Form.Group className="mb-3" controlId="formName">
-//                   <Form.Label>Your Name</Form.Label>
-//                   <Form.Control type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" required />
-//                 </Form.Group>
-
-//                 <Form.Group className="mb-3" controlId="formEmail">
-//                   <Form.Label>Email Address</Form.Label>
-//                   <Form.Control type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter your email" required />
-//                 </Form.Group>
-
-//                 <Form.Group className="mb-4" controlId="formMessage">
-//                   <Form.Label>Message</Form.Label>
-//                   <Form.Control as="textarea" name="message" value={formData.message} onChange={handleChange} rows={4} placeholder="How can we help you?" required />
-//                 </Form.Group>
-
-//                 <div className="text-center">
-//                   <Button variant="primary" type="submit" className="px-5 py-2 fw-semibold">
-//                     Send Message
-//                   </Button>
-//                 </div>
-//               </Form>
-//             )}
-//           </Col>
-//         </Row>
-//       </Container>
-//     </div>
-//   );
-// };
-
-// export default Enquiry;
-
-
-
-
-
-
-
-// import React from "react";
-// import { Container, Row, Col, Form, Button } from "react-bootstrap";
-// import '../style/enquiry.css';
-// import SupportAgentImage from '../img/FocusedOffice.png'; // Replace with your image path
-
-// const Enquiry = () => {
-//   return (
-//     <div className="enquiry-section py-5">
-//       <Container>
-//         <Row className="align-items-center">
-//           {/* Form Section */}
-//           <Col md={6} className="mb-5 mb-md-0">
-//             <h2 className="mb-4 fw-bold text-primary">Get in Touch</h2>
-//             <p className="mb-4 text-muted">
-//               Have a question or need help? Fill out the form and our team will get back to you shortly.
-//             </p>
-//             <Form>
-//               <Form.Group className="mb-3" controlId="formName">
-//                 <Form.Control type="text" placeholder="Your Name" required />
-//               </Form.Group>
-//               <Form.Group className="mb-3" controlId="formEmail">
-//                 <Form.Control type="email" placeholder="Email Address" required />
-//               </Form.Group>
-//               <Form.Group className="mb-3" controlId="formSubject">
-//                 <Form.Control type="text" placeholder="Subject" required />
-//               </Form.Group>
-//               <Form.Group className="mb-4" controlId="formMessage">
-//                 <Form.Control as="textarea" rows={4} placeholder="Your Message" required />
-//               </Form.Group>
-//               <Button variant="primary" type="submit" className="w-100">
-//                 Submit Enquiry
-//               </Button>
-//             </Form>
-//           </Col>
-
-//           {/* Image Section */}
-//           <Col md={6} className="text-center">
-//             <img
-//               src={SupportAgentImage}
-//               alt="Support Agent Talking to Client"
-//               className="img-fluid animated-support-image"
-//             />
-//           </Col>
-//         </Row>
-//       </Container>
-//     </div>
-//   );
-// };
-
-// export default Enquiry;
-
-
-
-
-// import React from "react";
-// import { Container, Row, Col, Form, Button } from "react-bootstrap";
-// import { motion } from "framer-motion";
-// import EnquiryImage from "../img/FocusedOffice.png"; // Replace with your image path
-// import "../style/enquiry.css";
-
-// const Enquiry = () => {
-//   return (
-//     <div className="enquiry-section">
-//       <Container className="py-5">
-//         <Row className="align-items-center g-5">
-//           <Col md={6}>
-//             <motion.img
-//               src={EnquiryImage}
-//               alt="Support Staff Communicating with Client"
-//               className="img-fluid rounded shadow enquiry-image"
-//               initial={{ opacity: 0, x: -50 }}
-//               animate={{ opacity: 1, x: 0 }}
-//               transition={{ duration: 1 }}
-//             />
-//           </Col>
-
-//           <Col md={6}>
-//             <motion.div
-//               initial={{ opacity: 0, x: 50 }}
-//               animate={{ opacity: 1, x: 0 }}
-//               transition={{ duration: 1 }}
-//               className="form-wrapper p-4 shadow rounded bg-white"
-//             >
-//               <h2 className="mb-4 text-primary fw-bold">Contact Us</h2>
-//               <Form>
-//                 <Form.Group className="mb-3">
-//                   <Form.Label>Name</Form.Label>
-//                   <Form.Control type="text" placeholder="Enter your name" />
-//                 </Form.Group>
-
-//                 <Form.Group className="mb-3">
-//                   <Form.Label>Email</Form.Label>
-//                   <Form.Control type="email" placeholder="Enter your email" />
-//                 </Form.Group>
-
-//                 <Form.Group className="mb-3">
-//                   <Form.Label>Message</Form.Label>
-//                   <Form.Control as="textarea" rows={4} placeholder="How can we help you?" />
-//                 </Form.Group>
-
-//                 <Button variant="primary" type="submit">
-//                   Submit Enquiry
-//                 </Button>
-//               </Form>
-//             </motion.div>
-//           </Col>
-//         </Row>
-//       </Container>
-//     </div>
-//   );
-// };
-
-// export default Enquiry;
-
-
-// import React from "react";
-// import { Container, Row, Col, Form, Button } from "react-bootstrap";
-// import { motion } from "framer-motion";
-// import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaClock, FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
-// import "../style/enquiry.css";
-// import EnquiryImg from "../img/FocusedOffice.png"; // Example image
-
-// const Enquiry = () => {
-//   return (
-//     <div className="enquiry-section">
-//       <Container className="py-5">
-//         <Row className="align-items-center">
-//           <Col md={6} className="mb-4 mb-md-0">
-//             <motion.img
-//               initial={{ opacity: 0, x: -50 }}
-//               animate={{ opacity: 1, x: 0 }}
-//               transition={{ duration: 0.6 }}
-//               src={EnquiryImg}
-//               alt="Contact Support"
-//               className="img-fluid rounded shadow"
-//             />
-//           </Col>
-
-//           <Col md={6}>
-//             <motion.div
-//               initial={{ opacity: 0, y: 30 }}
-//               animate={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.6, delay: 0.2 }}
-//               className="contact-form-container"
-//             >
-//               <h2 className="mb-4 text-primary">Get in Touch</h2>
-//               <Form>
-//                 <Form.Group controlId="formName" className="mb-3">
-//                   <Form.Control type="text" placeholder="Your Name" required />
-//                 </Form.Group>
-
-//                 <Form.Group controlId="formEmail" className="mb-3">
-//                   <Form.Control type="email" placeholder="Your Email" required />
-//                 </Form.Group>
-
-//                 <Form.Group controlId="formMessage" className="mb-3">
-//                   <Form.Control as="textarea" rows={4} placeholder="Your Message" required />
-//                 </Form.Group>
-
-//                 <Button variant="primary" type="submit" className="w-100">
-//                   Submit
-//                 </Button>
-//               </Form>
-//             </motion.div>
-//           </Col>
-//         </Row>
-
-//         {/* Section 2: Contact Details Grid */}
-//         <Row className="mt-5 text-center contact-details">
-//           <Col md={3} sm={6} className="mb-4">
-//             <FaPhoneAlt size={24} className="mb-2 text-primary" />
-//             <p className="mb-1">Phone</p>
-//             <strong>+91 9876543210</strong>
-//           </Col>
-//           <Col md={3} sm={6} className="mb-4">
-//             <FaClock size={24} className="mb-2 text-primary" />
-//             <p className="mb-1">Working Hours</p>
-//             <strong>Mon - Sat: 9AM - 6PM</strong>
-//           </Col>
-//           <Col md={3} sm={6} className="mb-4">
-//             <FaMapMarkerAlt size={24} className="mb-2 text-primary" />
-//             <p className="mb-1">Location</p>
-//             <strong>Bangalore, India</strong>
-//           </Col>
-//           <Col md={3} sm={6} className="mb-4">
-//             <FaEnvelope size={24} className="mb-2 text-primary" />
-//             <p className="mb-1">Email</p>
-//             <strong>support@bhagirathitsolutions.co.in</strong>
-//           </Col>
-//         </Row>
-
-//         {/* Section 3: Google Map Embed */}
-//         <Row className="mt-4">
-//           <Col>
-//             <iframe
-//               title="Google Map"
-//               src="https://www.google.com/maps/embed?pb=!1m18..." // Add real map URL
-//               width="100%"
-//               height="300"
-//               style={{ border: 0 }}
-//               allowFullScreen=""
-//               loading="lazy"
-//               referrerPolicy="no-referrer-when-downgrade"
-//             ></iframe>
-//           </Col>
-//         </Row>
-
-//         {/* Social Media Icons */}
-//         <Row className="text-center mt-4">
-//           <Col>
-//             <div className="social-icons">
-//               <a href="#"><FaFacebook /></a>
-//               <a href="#"><FaTwitter /></a>
-//               <a href="#"><FaLinkedin /></a>
-//               <a href="#"><FaInstagram /></a>
-//             </div>
-//           </Col>
-//         </Row>
-//       </Container>
-//     </div>
-//   );
-// };
-
-// export default Enquiry;
-
-
-import React, { useState } from "react"; // Add useState
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row, Col, Form, Button, Card, Accordion } from "react-bootstrap";
 import { motion } from "framer-motion";
 import {
   FaPhoneAlt,
@@ -310,18 +9,68 @@ import {
   FaFacebook,
   FaTwitter,
   FaLinkedin,
-  FaInstagram
+  FaInstagram,
 } from "react-icons/fa";
 import "../style/enquiry.css";
-import EnquiryImg from "../img/FocusedOffice.png"; // Example image
+import EnquiryImg from "../img/FocusedOffice.png";
+
+// Same nine services as the Services page, plus a general option
+const serviceOptions = [
+  "IT Support and Infrastructure Management",
+  "Customer Service and Helpdesk",
+  "Business Administration Services",
+  "Business Process Outsourcing (BPO)",
+  "Virtual Assistant Services",
+  "Software Development and Web Solutions",
+  "Sales Support and Lead Generation",
+  "Digital Marketing Support",
+  "Dedicated Remote Teams and Staff Outsourcing",
+  "General Enquiry",
+];
+
+const faqs = [
+  {
+    q: "What services does Bhagirath Solutions provide?",
+    a: "We offer IT support, customer service, business administration, BPO, virtual assistance, software and web solutions, sales support, digital marketing assistance, and dedicated remote staffing.",
+  },
+  {
+    q: "Can I outsource only one specific task or service?",
+    a: "Yes. The scope can be discussed around an individual task, a defined business function, or a broader ongoing support requirement.",
+  },
+  {
+    q: "Can services be tailored to my business processes?",
+    a: "We can discuss your existing workflows, tools, reporting needs, and responsibilities to determine a suitable service arrangement.",
+  },
+  {
+    q: "Can you provide ongoing remote support?",
+    a: "Remote support arrangements can be discussed based on the service required, agreed working hours, communication processes, and business needs.",
+  },
+  {
+    q: "How do we get started?",
+    a: "Contact us with a brief description of your requirements. We can then discuss the scope of work, priorities, expected outcomes, and suitable next steps.",
+  },
+];
+
+const contactItems = [
+  { icon: FaPhoneAlt, title: "Phone", text: "+91 (Business Support)" },
+  { icon: FaClock, title: "Working Hours", text: "Mon - Sat: 9:00 AM - 6:00 PM" },
+  { icon: FaMapMarkerAlt, title: "Office Address", text: "Bhopal, Madhya Pradesh - 462023, India" },
+  { icon: FaEnvelope, title: "Email", text: "support@bhagirathitsolutions.co.in", breakText: true },
+];
+
+const socialLinks = [
+  { icon: FaFacebook, href: "#facebook", label: "Facebook" },
+  { icon: FaTwitter, href: "#twitter", label: "Twitter" },
+  { icon: FaLinkedin, href: "#linkedin", label: "LinkedIn" },
+  { icon: FaInstagram, href: "#instagram", label: "Instagram" },
+];
 
 const Enquiry = () => {
-
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFormSubmit = async (e) => {
-    e.preventDefault(); // prevent default redirect
+    e.preventDefault();
     setIsLoading(true);
 
     const form = e.target;
@@ -350,111 +99,176 @@ const Enquiry = () => {
   };
 
   return (
-    <div className="enquiry-section">
-      <Container className="py-5">
-        <Row className="align-items-center">
-          <Col md={6} className="mb-4 mb-md-0">
-            <motion.img
-              initial={{ opacity: 0, x: -50 }}
+    <div className="enquiry-page">
+      {/* Hero banner */}
+      <section className="enquiry-hero">
+        <Container className="enquiry-hero-inner">
+          <span className="enquiry-badge">
+            <span className="enquiry-badge-dot" />
+            Contact Us
+          </span>
+          <h1 className="enquiry-hero-title">Let’s Discuss How We Can Support Your Business</h1>
+          <p className="enquiry-hero-subtitle">
+            Looking to improve your business operations, reduce administrative workloads, strengthen IT support, or build a remote team? Bhagirath Solutions is ready to discuss your requirements and explore a suitable outsourcing arrangement.
+          </p>
+        </Container>
+      </section>
+
+      <Container className="enquiry-body">
+        {/* Image + Form (same height, top-aligned) */}
+        <Row className="g-4 g-lg-5 mb-5">
+          <Col lg={5} className="d-flex">
+            <motion.div
+              className="enquiry-img-wrap w-100"
+              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              src={EnquiryImg}
-              alt="Contact Support"
-              className="img-fluid rounded shadow"
-            />
+            >
+              <img
+                src={EnquiryImg}
+                alt="Bhagirath Solutions Support Team"
+                className="enquiry-img"
+              />
+            </motion.div>
           </Col>
 
-          <Col md={6}>
+          <Col lg={7}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="contact-form-container"
             >
-              <h2 className="mb-4 text-primary">Get in Touch</h2>
-              {isSubmitted ? (
-                <div className="alert alert-success text-center">
-                  🎉 Thank you! Your message has been sent.
-                </div>
-              ) : (
-                <Form onSubmit={handleFormSubmit}>
-                  <Form.Group className="mb-3">
-                    <Form.Control type="text" name="name" placeholder="Your Name" required />
-                  </Form.Group>
+              <Card className="border-0 shadow-sm p-4 p-md-5 enquiry-card-main">
+                <h3 className="fw-bold mb-2 enquiry-card-title">Enquiry Form</h3>
+                <p className="small text-muted mb-4">
+                  Tell us a little about your business and the support you need. We will use this information to understand your requirements and discuss the next steps.
+                </p>
 
-                  <Form.Group className="mb-3">
-                    <Form.Control type="email" name="email" placeholder="Your Email" required />
-                  </Form.Group>
+                {isSubmitted ? (
+                  <div className="alert alert-success text-center py-4 rounded-3">
+                    <h5 className="fw-bold mb-2">🎉 Thank you for contacting Bhagirath Solution.</h5>
+                    <p className="mb-0 small">
+                      We have received your enquiry and will respond using the contact details provided.
+                    </p>
+                  </div>
+                ) : (
+                  <Form onSubmit={handleFormSubmit} className="enquiry-form">
+                    {/* Tells you which page the submission came from (Career uses the same Formspree form) */}
+                    <input type="hidden" name="form_type" value="Website enquiry" />
+                    <input type="hidden" name="_subject" value="New website enquiry – Bhagirath IT Solutions" />
 
-                  <Form.Group className="mb-3">
-                    <Form.Control
-                      as="textarea"
-                      name="message"
-                      rows={4}
-                      placeholder="Your Message"
-                      required
-                    />
-                  </Form.Group>
+                    <Row>
+                      <Col md={6} className="mb-3">
+                        <Form.Group>
+                          <Form.Label className="small fw-semibold">Full Name *</Form.Label>
+                          <Form.Control type="text" name="name" placeholder="John Doe" required className="py-2" />
+                        </Form.Group>
+                      </Col>
+                      <Col md={6} className="mb-3">
+                        <Form.Group>
+                          <Form.Label className="small fw-semibold">Company Name *</Form.Label>
+                          <Form.Control type="text" name="company_name" placeholder="Your Business Ltd." required className="py-2" />
+                        </Form.Group>
+                      </Col>
+                    </Row>
 
-                  <Button variant="primary" type="submit" className="w-100" disabled={isLoading}>
-                    {isLoading ? "Sending..." : "Submit"}
-                  </Button>
-                </Form>
-              )}
+                    <Row>
+                      <Col md={6} className="mb-3">
+                        <Form.Group>
+                          <Form.Label className="small fw-semibold">Business Email *</Form.Label>
+                          <Form.Control type="email" name="email" placeholder="john@company.com" required className="py-2" />
+                        </Form.Group>
+                      </Col>
+                      <Col md={6} className="mb-3">
+                        <Form.Group>
+                          <Form.Label className="small fw-semibold">Contact Number *</Form.Label>
+                          <Form.Control type="tel" name="phone" placeholder="+91 98765 43210" required className="py-2" />
+                        </Form.Group>
+                      </Col>
+                    </Row>
 
+                    <Form.Group className="mb-3">
+                      <Form.Label className="small fw-semibold">Service Required *</Form.Label>
+                      <Form.Select name="service_required" required defaultValue="" className="py-2">
+                        <option value="">Select a service...</option>
+                        {serviceOptions.map((service) => (
+                          <option key={service} value={service}>
+                            {service}
+                          </option>
+                        ))}
+                      </Form.Select>
+                    </Form.Group>
 
+                    <Form.Group className="mb-4">
+                      <Form.Label className="small fw-semibold">Brief Description of Your Requirements *</Form.Label>
+                      <Form.Control
+                        as="textarea"
+                        name="message"
+                        rows={4}
+                        placeholder="Tell us about your operational needs, timeline, or current challenges..."
+                        required
+                        className="py-2"
+                      />
+                    </Form.Group>
+
+                    <Button type="submit" className="w-100 py-3 fw-bold enquiry-submit" disabled={isLoading}>
+                      {isLoading ? "Submitting Enquiry..." : "Submit Enquiry"}
+                    </Button>
+                  </Form>
+                )}
+              </Card>
             </motion.div>
           </Col>
         </Row>
 
-        {/* Section 2: Contact Details Grid */}
-        <Row className="mt-5 text-center contact-details">
-          <Col md={3} sm={6} className="mb-4">
-            <FaPhoneAlt size={24} className="mb-2 text-primary" />
-            <p className="mb-1">Phone</p>
-            <strong>+91 9876543210</strong>
-          </Col>
-          <Col md={3} sm={6} className="mb-4">
-            <FaClock size={24} className="mb-2 text-primary" />
-            <p className="mb-1">Working Hours</p>
-            <strong>Mon - Sat: 9AM - 6PM</strong>
-          </Col>
-          <Col md={3} sm={6} className="mb-4">
-            <FaMapMarkerAlt size={24} className="mb-2 text-primary" />
-            <p className="mb-1">Location</p>
-            <strong>Bangalore, India</strong>
-          </Col>
-          <Col md={3} sm={6} className="mb-4">
-            <FaEnvelope size={24} className="mb-2 text-primary" />
-            <p className="mb-1">Email</p>
-            <strong>support@bhagirathitsolutions.co.in</strong>
-          </Col>
+        {/* FAQ */}
+        <div className="enquiry-faq mb-5">
+          <div className="text-center mb-4">
+            <h3 className="fw-bold enquiry-card-title">Frequently Asked Questions</h3>
+          </div>
+          <Row className="justify-content-center">
+            <Col lg={9}>
+              <Accordion defaultActiveKey="0">
+                {faqs.map((faq, index) => (
+                  <Accordion.Item eventKey={String(index)} key={faq.q}>
+                    <Accordion.Header>{faq.q}</Accordion.Header>
+                    <Accordion.Body>{faq.a}</Accordion.Body>
+                  </Accordion.Item>
+                ))}
+              </Accordion>
+            </Col>
+          </Row>
+        </div>
+
+        {/* Contact Details Grid */}
+        <Row className="g-4 text-center">
+          {contactItems.map(({ icon: Icon, title, text, breakText }) => (
+            <Col md={3} sm={6} key={title}>
+              <div className="contact-card p-4 bg-white rounded-4 shadow-sm h-100">
+                <div className="contact-icon mb-3 mx-auto rounded-circle d-flex align-items-center justify-content-center">
+                  <Icon size={20} />
+                </div>
+                <h6 className="fw-bold mb-1 contact-card-title">{title}</h6>
+                <p className={`small text-muted mb-0${breakText ? " text-break" : ""}`}>{text}</p>
+              </div>
+            </Col>
+          ))}
         </Row>
 
-        {/* Section 3: Google Map Embed */}
-        <Row className="mt-4">
-          <Col>
-            <iframe
-              title="Google Map"
-              src="https://www.google.com/maps/embed?pb=!1m18..." // Add real map URL
-              width="100%"
-              height="300"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </Col>
-        </Row>
-
-        {/* Social Media Icons */}
+        {/* Social Media Links */}
         <Row className="text-center mt-5">
           <Col>
-            <div className="social-icons d-flex justify-content-center gap-4">
-              <a href="#" className="text-primary fs-4"><FaFacebook /></a>
-              <a href="#" className="text-info fs-4"><FaTwitter /></a>
-              <a href="#" className="text-primary fs-4"><FaLinkedin /></a>
-              <a href="#" className="text-danger fs-4"><FaInstagram /></a>
+            <div className="social-icons d-flex justify-content-center gap-3">
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className="social-icon-link rounded-circle d-flex align-items-center justify-content-center"
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
           </Col>
         </Row>

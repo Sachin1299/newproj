@@ -1,44 +1,107 @@
+/* ===================================================================
+   ABOUT PAGE
+   =================================================================== */
+
+/* ===== HERO ===== */
 .about-hero {
-    background-image: url('../img/women-talking-over-phone.png'); /* Update with actual path */
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    position: relative;
-    color: white;
+  position: relative;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 0% 100%, rgba(95, 65, 190, 0.45), transparent 55%),
+    linear-gradient(135deg, #070f24 0%, #0b1a3a 55%, #0a1f3a 100%);
+}
+
+/* Photo on the right, fading into the background (same look as the home hero) */
+.about-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  background: url('../img/about_hero_section_image.png') center 25% / cover no-repeat;
+  filter: brightness(0.8) saturate(1.1);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 40%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 40%);
+}
+
+.about-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero-title {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-align: left;
+}
+
+.about-hero-subtitle {
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  color: #c1cfe0;
+  text-align: left;
+  margin: 0;
+}
+
+.about-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.9rem;
+  border-radius: 32px;
+  background: linear-gradient(135deg, var(--accent-teal, #00d4aa), #00b894);
+  color: #0a1628 !important;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 212, 170, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 212, 170, 0.45);
+  text-decoration: none;
+}
+
+/* ===== PAGE CONTENT ===== */
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.section-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+  .about-hero {
+    height: auto;
+    min-height: 300px;
+    padding: 48px 0;
   }
-  
-  .about-hero-overlay {
-    background: rgba(0, 0, 0, 0.6);
-    height: 100%;
-    display: flex;
-    align-items: center;
+
+  .about-hero::before {
+    width: 100%;
+    opacity: 0.3;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
-  
-  .hero-title {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.5rem;
-  }
-  
-  .feature-card {
-    transition: transform 0.3s ease;
-  }
-  
-  .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .section-text {
-    font-size: 1.1rem;
-    color: #555;
-  }
-  
+}

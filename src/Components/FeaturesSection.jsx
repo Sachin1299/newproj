@@ -41,7 +41,7 @@ const FeaturesSection = () => (
       <Row className="align-items-center g-5">
         {/* Left: Text Content */}
         <Col lg={6}>
-          <p className="section-label">Why Bhagirath Solution</p>
+          <p className="section-label">Why Bhagirath Solutions</p>
           <h2 className="section-title">
             Your Trusted Business Support Partner
           </h2>
@@ -49,7 +49,7 @@ const FeaturesSection = () => (
 
           <p className="section-text">
             Running a successful business requires the right balance of time,
-            people, technology, and well-managed processes. Bhagirath Solution
+            people, technology, and well-managed processes. Bhagirath Solutions
             brings these essential elements together through practical,
             results-driven outsourcing solutions that are carefully tailored to
             your unique business needs and growth objectives.
@@ -67,7 +67,7 @@ const FeaturesSection = () => (
             clients, understanding that every business is different and
             deserves a support model that truly fits. From startups looking
             to scale quickly to established enterprises seeking operational
-            optimisation, Bhagirath Solution is the partner you can count on.
+            optimisation, Bhagirath Solutions is the partner you can count on.
           </p>
         </Col>
 

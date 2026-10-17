@@ -1,79 +1,234 @@
-/* enquiry.css */
+/* ===================================================================
+   ENQUIRY PAGE
+   =================================================================== */
+.enquiry-page {
+  background-color: #F8FAFC;
+  min-height: 100vh;
+}
 
-.enquiry-section {
-    min-height: 100vh;
-    background: linear-gradient(to right, #f3f4f6, #e5e7eb);
-    display: flex;
-    align-items: center;
-    padding: 60px 0;
+/* ===== HERO BANNER (same look as Home / About / Services) ===== */
+.enquiry-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 44px 0 48px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 0% 100%, rgba(95, 65, 190, 0.45), transparent 55%),
+    radial-gradient(ellipse at 90% 0%, rgba(20, 140, 160, 0.30), transparent 55%),
+    linear-gradient(135deg, #070f24 0%, #0b1a3a 55%, #0a1f3a 100%);
+}
+
+.enquiry-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.enquiry-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 212, 170, 0.1);
+  border: 1px solid rgba(0, 212, 170, 0.25);
+  border-radius: 50px;
+  padding: 0.35rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #00d4aa;
+  margin-bottom: 0.9rem;
+}
+
+.enquiry-badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #00d4aa;
+  border-radius: 50%;
+}
+
+.enquiry-hero-title {
+  font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-align: left;
+  max-width: 20em;
+  margin: 0 0 0.75rem;
+}
+
+.enquiry-hero-subtitle {
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  line-height: 1.6;
+  color: #c1cfe0;
+  max-width: 720px;
+  text-align: left;
+  margin: 0;
+}
+
+/* ===== BODY ===== */
+.enquiry-body {
+  padding-top: 40px;
+  padding-bottom: 56px;
+}
+
+/* ===== IMAGE (fills the same height as the form card) ===== */
+.enquiry-img-wrap {
+  position: relative;
+  min-height: 380px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 31, 58, 0.15);
+}
+
+.enquiry-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===== FORM CARD ===== */
+.enquiry-card-main {
+  background-color: #ffffff;
+  border-radius: 24px;
+}
+
+.enquiry-card-title {
+  color: #1F293A;
+}
+
+.enquiry-form .form-label {
+  color: #334155;
+}
+
+.enquiry-form .form-control,
+.enquiry-form .form-select {
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: #f8fafc;
+  color: #1F293A;
+  transition: all 0.3s ease;
+}
+
+.enquiry-form .form-control::placeholder {
+  color: #94a3b8;
+}
+
+.enquiry-form .form-control:focus,
+.enquiry-form .form-select:focus {
+  border-color: #20998E;
+  box-shadow: 0 0 0 0.2rem rgba(32, 153, 142, 0.15);
+  background-color: #ffffff;
+}
+
+.enquiry-form .enquiry-submit {
+  background-color: #20998E;
+  border: 0;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(32, 153, 142, 0.3);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enquiry-form .enquiry-submit:hover,
+.enquiry-form .enquiry-submit:focus,
+.enquiry-form .enquiry-submit:active {
+  background-color: #1b857b;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(32, 153, 142, 0.4);
+}
+
+.enquiry-form .enquiry-submit:disabled {
+  background-color: #20998E;
+  opacity: 0.7;
+}
+
+/* ===== FAQ ACCORDION ===== */
+.enquiry-faq .accordion-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.enquiry-faq .accordion-button {
+  font-weight: 600;
+  color: #1F293A;
+  background: #fff;
+}
+
+.enquiry-faq .accordion-button:not(.collapsed) {
+  color: #20998E;
+  background: #E8F7F5;
+  box-shadow: none;
+}
+
+.enquiry-faq .accordion-button:focus {
+  border-color: #20998E;
+  box-shadow: 0 0 0 0.2rem rgba(32, 153, 142, 0.15);
+}
+
+/* Teal arrow when open (Bootstrap's default is blue) */
+.enquiry-faq .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2320998E'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.enquiry-faq .accordion-body {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* ===== CONTACT CARDS ===== */
+.contact-card {
+  border-top: 4px solid #20998E;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+.contact-icon {
+  width: 55px;
+  height: 55px;
+  background-color: #E8F7F5;
+  color: #20998E;
+}
+
+.contact-card-title {
+  color: #1F293A;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-icon-link {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  color: #1F293A;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-icon-link:hover {
+  transform: translateY(-3px);
+  background-color: #20998E;
+  color: #fff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+  .enquiry-img-wrap {
+    min-height: 260px;
   }
-  
-  .enquiry-card {
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    animation: fadeInUp 1s ease forwards;
+}
+
+@media (max-width: 576px) {
+  .enquiry-hero {
+    padding: 32px 0 36px;
   }
-  
-  .enquiry-header h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #0d6efd;
-    margin-bottom: 20px;
-  }
-  
-  .enquiry-header p {
-    color: #6c757d;
-    margin-bottom: 30px;
-  }
-  
-  .enquiry-form input,
-  .enquiry-form textarea {
-    border-radius: 10px;
-    border: 1px solid #ced4da;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .enquiry-form input:focus,
-  .enquiry-form textarea:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
-  }
-  
-  .enquiry-form button {
-    background-color: #0d6efd;
-    border: none;
-    padding: 10px 24px;
-    border-radius: 10px;
-    font-weight: 500;
-    transition: 0.3s;
-  }
-  
-  .enquiry-form button:hover {
-    background-color: #0b5ed7;
-  }
-  
-  /* Animation */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .enquiry-card {
-      padding: 20px;
-    }
-  
-    .enquiry-header h2 {
-      font-size: 1.5rem;
-    }
-  }
-  
+}

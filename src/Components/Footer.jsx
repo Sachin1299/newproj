@@ -1,42 +1,106 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import '../style/footer.css'
+import { Link } from "react-router-dom";
+import logoImg from "../img/logo.png";
+import "../style/footer.css";
+
+// Change the name here and it updates everywhere in the footer
+const companyName = "Bhagirath Solution";
+
+const quickLinks = [
+  { label: "Home", to: "/" },
+  { label: "About Us", to: "/About" },
+  { label: "Services", to: "/Services" },
+  { label: "Facilities", to: "/Facilities" },
+  // These two jump to sections on the Home page (ids: "why-choose" and "industries")
+  { label: "Why Choose Us", to: "/", scrollTo: "why-choose" },
+  { label: "Industries We Serve", to: "/", scrollTo: "industries" },
+  { label: "Enquiry", to: "/Enquiry" },
+  { label: "Careers", to: "/Careers" },
+];
+
+// scrollTo ids match the cards on the Services page
+const serviceLinks = [
+  { label: "IT Support", scrollTo: "it-support" },
+  { label: "Customer Service", scrollTo: "customer-service" },
+  { label: "Business Administration", scrollTo: "business-admin" },
+  { label: "BPO", scrollTo: "bpo" },
+  { label: "Virtual Assistant", scrollTo: "virtual-assistant" },
+  { label: "Software and Web Solutions", scrollTo: "software-dev" },
+  { label: "Sales and Lead Generation", scrollTo: "sales-support" },
+  { label: "Digital Marketing", scrollTo: "digital-marketing" },
+  { label: "Remote Staffing", scrollTo: "remote-teams" },
+];
 
 const Footer = () => (
-  <footer className="footer-section bg-dark text-light pt-5 pb-3">
+  <footer className="footer-section text-light">
     <Container>
-      <Row className="mb-4">
-        <Col md={4} className="mb-4 mb-md-0">
-          <h5 className="fw-bold text-uppercase">BHAGIRATH SOLUTION</h5>
-          <p>Outsource Smarter. Operate Better. Grow Faster.</p>
+      <Row className="g-4 mb-4 align-items-start">
+        {/* Brand */}
+        <Col lg={3} md={6}>
+          <img src={logoImg} alt={`${companyName} logo`} className="footer-logo-img mb-3" />
+          <p className="footer-desc">
+            Helping businesses improve efficiency through outsourcing, business administration,
+            technology support, and flexible remote services.
+          </p>
         </Col>
 
-        <Col md={4} className="mb-4 mb-md-0">
-          <h6 className="fw-semibold text-uppercase mb-2">Quick Links</h6>
-          <ul className="list-unstyled">
-            <li><a href="#/" className="footer-link">Home</a></li>
-            <li><a href="#/About" className="footer-link">About Us</a></li>
-            <li><a href="#/Services" className="footer-link">Services</a></li>
-            <li><a href="#/Enquiry" className="footer-link">Enquiry</a></li>
+        {/* Quick links */}
+        <Col lg={2} md={6}>
+          <h6 className="footer-heading">Quick Links</h6>
+          <ul className="list-unstyled footer-links-list">
+            {quickLinks.map(({ label, to, scrollTo }) => (
+              <li key={label}>
+                <Link
+                  to={to}
+                  state={scrollTo ? { scrollTo } : undefined}
+                  className="footer-link"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </Col>
 
-        <Col md={4}>
-          <h6 className="fw-semibold text-uppercase mb-2">Our Address</h6>
-          <address className="mb-0">
-            BHAGIRATH SOLUTION<br />
-            Bhopal, Madhya Pradesh - 462023<br />
-            India<br />
-            <a href="mailto:support@bhagirathitsolutions.co.in" className="footer-link">support@bhagirathitsolutions.co.in</a>
+        {/* Services */}
+        <Col lg={3} md={6}>
+          <h6 className="footer-heading">Our Services</h6>
+          <ul className="list-unstyled footer-links-list">
+            {serviceLinks.map(({ label, scrollTo }) => (
+              <li key={label}>
+                <Link to="/Services" state={{ scrollTo }} className="footer-link">
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Col>
+
+        {/* Address */}
+        <Col lg={4} md={6}>
+          <h6 className="footer-heading">Our Address</h6>
+          <address className="footer-address">
+            <strong>{companyName}</strong>
+            <br />
+            Bhopal, Madhya Pradesh - 462023
+            <br />
+            India
+            <br />
+            <a href="mailto:support@bhagirathitsolutions.co.in" className="footer-email-link">
+              support@bhagirathitsolutions.co.in
+            </a>
           </address>
         </Col>
       </Row>
 
-      <Row>
-        <Col className="text-center">
-          <small>&copy; {new Date().getFullYear()} BHAGIRATH SOLUTION. All Rights Reserved.</small>
-        </Col>
-      </Row>
+      <hr className="footer-divider" />
+
+      <div className="text-center">
+        <small className="footer-copy">
+          &copy; {new Date().getFullYear()} {companyName}. All rights reserved.
+        </small>
+      </div>
     </Container>
   </footer>
 );

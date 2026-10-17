@@ -1,117 +1,135 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { FaShieldAlt, FaComments, FaChartLine, FaHandshake } from "react-icons/fa";
 import "../style/about.css";
-// import supportimg from "../img/Customer Service and Web Development팀.png"
-import supportimg from "../img/women-talking-over-phone.png"
+import supportimg from "../img/who_we_are.png";
+
 const About = () => {
   return (
     <div className="about-page">
       {/* Hero Section */}
       <div className="about-hero">
-        <div className="about-hero-overlay">
-          <Container>
-            <Row className="justify-content-center text-center text-white">
-              <Col md={8}>
-                <h1 className="hero-title">Welcome to Suvian Tech LLP</h1>
-                <p className="hero-subtitle">
-                  Pioneering communication technology with innovative and tailored solutions.
-                </p>
-                <Button variant="light" size="lg" className="mt-3">
-                  Learn More
-                </Button>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        <Container className="about-hero-inner">
+          <Row>
+            <Col lg={7} className="text-start">
+              <h1 className="about-hero-title mb-2">About Bhagirath Solutions</h1>
+              <p className="about-hero-subtitle mb-4">
+                Outsource Smarter. Operate Better. Grow Faster.
+              </p>
+              <Link to="/Enquiry" className="about-hero-btn">
+                Get in Touch <span>→</span>
+              </Link>
+            </Col>
+          </Row>
+        </Container>
       </div>
 
-      {/* Content Section */}
+      {/* Who We Are Section */}
       <Container className="py-5">
-        {/* Company Info */}
-        <Row className="align-items-center mb-5">
-          <Col md={6}>
-            <h2 className="section-title">Who We Are</h2>
-            <p className="section-text">
-              At Suvian Tech LLP, we revolutionize the way businesses communicate by
-              offering cutting-edge and cost-efficient solutions.
+        <Row className="align-items-center mb-5 pb-4">
+          <Col lg={6} className="mb-4 mb-lg-0">
+            <h2 className="section-title fw-bold mb-3" style={{ color: '#1F293A' }}>Who We Are</h2>
+            <p className="section-text text-muted mb-3">
+              Bhagirath Solutions is a business outsourcing and technology services company focused on helping organisations manage their day-to-day operations more effectively.
+            </p>
+            <p className="section-text text-muted mb-3">
+              We provide support across IT services, customer service, business administration, back-office operations, virtual assistance, sales support, and digital solutions. Our approach is built around understanding each client's requirements and delivering practical support that fits their existing processes.
+            </p>
+            <p className="section-text text-muted mb-0">
+              We recognise that every business operates differently. That is why we focus on flexible service arrangements, defined responsibilities, consistent communication, and solutions designed around your priorities.
             </p>
           </Col>
+          <Col lg={6}>
+            <div className="about-image-wrapper text-center">
+              <img
+                src={supportimg}
+                alt="Bhagirath Solutions Team Support"
+                className="img-fluid rounded shadow-lg"
+              />
+            </div>
+          </Col>
+        </Row>
+
+        {/* Mission & Vision Section */}
+        <Row className="g-4 mb-5">
           <Col md={6}>
-            <img
-              src={supportimg}
-              alt="Customer Support"
-              className="img-fluid rounded shadow-lg"
-            />
-          </Col>
-        </Row>
-
-        {/* Features */}
-        <Row className="g-4">
-          <Col md={4}>
-            <Card className="feature-card h-100 text-center">
+            <Card className="border-0 shadow-sm h-100 p-4" style={{ borderLeft: '4px solid #1F293A' }}>
               <Card.Body>
-                <Card.Title>🚀 Innovation at Competitive Costs</Card.Title>
-                <Card.Text>
-                  Startups like Suvian Tech LLP thrive on innovation. By adopting modern and disruptive technologies, we deliver high-performing and cost-effective communication solutions. BHAGIRATH SOLUTION, powered by Suvian's startup energy, offers advanced communication tools without breaking the bank.
-                </Card.Text>
+                <h3 className="fw-bold mb-3" style={{ color: '#1F293A' }}>Our Mission</h3>
+                <p className="text-muted mb-0" style={{ lineHeight: '1.7' }}>
+                  To help businesses operate more efficiently by delivering dependable outsourcing, administrative, and technology support that reduces operational pressure and allows teams to focus on growth.
+                </p>
               </Card.Body>
             </Card>
           </Col>
-
-          <Col md={4}>
-            <Card className="feature-card h-100 text-center">
+          <Col md={6}>
+            <Card className="border-0 shadow-sm h-100 p-4" style={{ borderLeft: '4px solid #20998E' }}>
               <Card.Body>
-                <Card.Title>⚡ Agility & Adaptability</Card.Title>
-                <Card.Text>
-                  Our startup DNA allows us to stay ahead of market shifts and adapt quickly to your changing needs. Whether it's upgrading technology or customizing features, BHAGIRATH SOLUTION responds with speed and flexibility to keep you ahead.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col md={4}>
-            <Card className="feature-card h-100 text-center">
-              <Card.Body>
-                <Card.Title>💡 Customer-Centric Approach</Card.Title>
-                <Card.Text>
-                  We don’t just build software — we solve real problems. Our customer-first attitude ensures that every BHAGIRATH SOLUTION solution is tailored to enhance user experience, simplify workflows, and meet actual business needs affordably.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col md={4}>
-            <Card className="feature-card h-100 text-center">
-              <Card.Body>
-                <Card.Title>📈 Productivity through Innovation</Card.Title>
-                <Card.Text>
-                  We’re constantly innovating to help your teams do more in less time. Our tools streamline communication, automate tasks, and empower your workforce to focus on what matters most — delivering value.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col md={4}>
-            <Card className="feature-card h-100 text-center">
-              <Card.Body>
-                <Card.Title>🔧 Flexible & Tailor-Made Solutions</Card.Title>
-                <Card.Text>
-                  Unlike larger corporations, our flexibility lets us build truly custom solutions. Whether you need specific workflows or integrations, BHAGIRATH SOLUTION molds its services to fit your unique business environment.
-                </Card.Text>
+                <h3 className="fw-bold mb-3" style={{ color: '#1F293A' }}>Our Vision</h3>
+                <p className="text-muted mb-0" style={{ lineHeight: '1.7' }}>
+                  To become a trusted outsourcing partner for businesses seeking practical, flexible, and long-term operational support.
+                </p>
               </Card.Body>
             </Card>
           </Col>
         </Row>
+
+        {/* Core Values Section */}
+        <div className="mb-5">
+          <div className="text-center mb-4">
+            <h2 className="fw-bold" style={{ color: '#1F293A' }}>Our Core Values</h2>
+            <p className="text-muted">The principles that guide our partnerships and service delivery.</p>
+          </div>
+          <Row className="g-4">
+            <Col md={3} sm={6}>
+              <Card className="feature-card h-100 text-center p-4 border-0 shadow-sm">
+                <div className="mb-3 text-center">
+                  <FaShieldAlt size={32} style={{ color: '#20998E' }} />
+                </div>
+                <h5 className="fw-bold mb-2" style={{ color: '#1F293A' }}>Reliability</h5>
+                <p className="small text-muted mb-0">We value consistency, ownership, and completing agreed tasks responsibly.</p>
+              </Card>
+            </Col>
+            <Col md={3} sm={6}>
+              <Card className="feature-card h-100 text-center p-4 border-0 shadow-sm">
+                <div className="mb-3 text-center">
+                  <FaComments size={32} style={{ color: '#20998E' }} />
+                </div>
+                <h5 className="fw-bold mb-2" style={{ color: '#1F293A' }}>Clear Communication</h5>
+                <p className="small text-muted mb-0">We believe good coordination and timely updates are essential to successful partnerships.</p>
+              </Card>
+            </Col>
+            <Col md={3} sm={6}>
+              <Card className="feature-card h-100 text-center p-4 border-0 shadow-sm">
+                <div className="mb-3 text-center">
+                  <FaChartLine size={32} style={{ color: '#20998E' }} />
+                </div>
+                <h5 className="fw-bold mb-2" style={{ color: '#1F293A' }}>Continuous Improvement</h5>
+                <p className="small text-muted mb-0">We look for practical ways to improve workflows, service delivery, and productivity.</p>
+              </Card>
+            </Col>
+            <Col md={3} sm={6}>
+              <Card className="feature-card h-100 text-center p-4 border-0 shadow-sm">
+                <div className="mb-3 text-center">
+                  <FaHandshake size={32} style={{ color: '#20998E' }} />
+                </div>
+                <h5 className="fw-bold mb-2" style={{ color: '#1F293A' }}>Partnership</h5>
+                <p className="small text-muted mb-0">We work to understand your objectives and align our support with your business needs.</p>
+              </Card>
+            </Col>
+          </Row>
+        </div>
 
         {/* Call-to-Action */}
         <Row className="justify-content-center mt-5">
-          <Col md={8} className="text-center">
-            <h3>Ready to Revolutionize Communication?</h3>
-            <p className="lead text-muted">
-              Join us on a journey of innovation and technology.
+          <Col lg={8} className="text-center p-5 rounded shadow-sm" style={{ backgroundColor: '#F8FAFC' }}>
+            <h3 className="fw-bold mb-3" style={{ color: '#1F293A' }}>Ready to Improve Your Operations?</h3>
+            <p className="text-muted mb-4">
+              Let's discuss how Bhagirath Solutions can support your business with flexible outsourcing and technology services.
             </p>
-            <Button variant="primary" size="lg">
-              Contact Us
+            <Button as={Link} to="/Enquiry" size="lg" style={{ backgroundColor: '#20998E', borderColor: '#20998E' }}>
+              Contact Us Today
             </Button>
           </Col>
         </Row>
