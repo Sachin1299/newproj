@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import { FaNetworkWired, FaBuilding, FaShieldAlt, FaHeadset, FaClipboardCheck, FaCheckCircle, FaArrowDown } from "react-icons/fa";
@@ -98,7 +99,6 @@ const sections = [
         id: "service-delivery",
         icon: FaClipboardCheck,
         title: "Our Facilities and Service Delivery",
-        // No "summary" here, so it only appears as a detail section (not in the four summary cards)
         intro: "At Bhagirath Solution, we aim to make outsourcing straightforward by establishing clear expectations, defined responsibilities, and suitable communication processes.",
         listHeading: "Structured Support. Clear Processes. Better Coordination.",
         items: [
@@ -133,6 +133,15 @@ const Facilities = () => {
 
     return (
         <div className="facilities-page">
+            <Helmet>
+                <title>Infrastructure & Facilities | Network Resiliency & Security | Bhagirath IT Solutions</title>
+                <meta
+                    name="description"
+                    content="Explore state-of-the-art facilities, network resiliency, robust operational capacity, and multi-layered physical and cyber security controls at Bhagirath IT Solutions."
+                />
+                <link rel="canonical" href="https://bhagirathitsolutions.co.in/#/Facilities" />
+            </Helmet>
+
             {/* Hero banner */}
             <section className="facilities-hero">
                 <Container className="facilities-hero-inner">
