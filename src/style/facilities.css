@@ -1,0 +1,232 @@
+/* ===================================================================
+   FACILITIES PAGE
+   =================================================================== */
+.facilities-page {
+    background-color: #F8FAFC;
+    min-height: 100vh;
+}
+
+/* ===== HERO BANNER (same look as Home / About / Services) ===== */
+.facilities-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 48px 0 52px;
+    color: #fff;
+    background:
+        radial-gradient(ellipse at 0% 100%, rgba(95, 65, 190, 0.45), transparent 55%),
+        radial-gradient(ellipse at 90% 0%, rgba(20, 140, 160, 0.30), transparent 55%),
+        linear-gradient(135deg, #070f24 0%, #0b1a3a 55%, #0a1f3a 100%);
+}
+
+.facilities-hero-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.facilities-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0, 212, 170, 0.1);
+    border: 1px solid rgba(0, 212, 170, 0.25);
+    border-radius: 50px;
+    padding: 0.35rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #00d4aa;
+    margin-bottom: 0.9rem;
+}
+
+.facilities-badge-dot {
+    width: 8px;
+    height: 8px;
+    background: #00d4aa;
+    border-radius: 50%;
+}
+
+.facilities-hero-title {
+    font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #fff;
+    text-align: left;
+    max-width: 16em;
+    margin: 0 0 0.75rem;
+}
+
+.facilities-hero-subtitle {
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    line-height: 1.6;
+    color: #c1cfe0;
+    max-width: 640px;
+    text-align: left;
+    margin: 0;
+}
+
+/* ===== BODY ===== */
+.facilities-body {
+    padding-top: 40px;
+    padding-bottom: 56px;
+}
+
+/* ===== SUMMARY CARDS ===== */
+.facility-summary-card {
+    border-radius: 16px;
+    border-top: 4px solid #20998E !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facility-summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+.facility-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #E8F7F5;
+    color: #20998E;
+}
+
+.facility-icon-lg {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+}
+
+.facility-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1F293A;
+}
+
+.facility-check {
+    color: #20998E;
+}
+
+.facility-more {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #20998E;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.facility-more:hover {
+    color: #1b857b;
+    text-decoration: underline;
+}
+
+/* ===== DETAIL SECTIONS ===== */
+/* Keeps the section clear of the navbar after a jump */
+.facility-section {
+    scroll-margin-top: 90px;
+    border-left: 5px solid #1F293A;
+    transition: border-color 0.3s ease;
+}
+
+.facility-section:hover {
+    border-left-color: #20998E;
+}
+
+.facility-section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #1F293A;
+    margin-bottom: 0.75rem;
+}
+
+.facility-list-heading {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #20998E;
+    margin-bottom: 1.25rem;
+}
+
+@media (min-width: 992px) {
+    .facility-border-start {
+        border-left: 1px solid #e5e7eb;
+    }
+}
+
+/* Numbered list with teal number badges */
+.facility-steps {
+    list-style: none;
+    counter-reset: step;
+    padding: 0;
+    margin: 0;
+}
+
+.facility-steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 2.6rem;
+    margin-bottom: 1rem;
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.facility-steps li:last-child {
+    margin-bottom: 0;
+}
+
+.facility-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #E8F7F5;
+    color: #20998E;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.facility-steps li strong {
+    color: #1F293A;
+}
+
+/* Closing note under a list */
+.facility-note {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid #20998E;
+    border-radius: 8px;
+    background: #F8FAFC;
+    color: #4a5568;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 576px) {
+    .facilities-hero {
+        padding: 32px 0 36px;
+    }
+
+    .facility-section-title {
+        font-size: 1.3rem;
+    }
+}

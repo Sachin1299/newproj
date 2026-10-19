@@ -35,7 +35,6 @@ newproj/
 │   │   ├── FeaturesSection.jsx
 │   │   ├── FeaturesHighlight.jsx
 │   │   ├── ServicesSection.jsx
-│   │   ├── TestimonialsSection.jsx
 │   │   └── Footer.jsx
 │   │
 │   ├── style/              # Per-component CSS files
@@ -52,6 +51,12 @@ newproj/
 │   └── img/                # Static image assets (~20 MB total)
 │
 ├── build/                  # Production build output (deployed to gh-pages)
+├── docs/                   # Project documentation
+│   ├── ARCHITECTURE.md
+│   ├── COMPONENTS.md
+│   ├── DEPLOYMENT.md
+│   ├── PAGES.md
+│   └── REDESIGN_PLAN.md
 ├── package.json
 └── package-lock.json
 ```

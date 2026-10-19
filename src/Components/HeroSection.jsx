@@ -1,45 +1,57 @@
 import React from "react";
-import { Carousel, Container, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import heroImg from "../img/hero-tech-support.png";
 import "../style/homepage1.css";
 
 const HeroSection = () => (
-  <section className="hero-carousel-section">
-    <Carousel 
-    controls={false}
-    indicators={false}
-    fade
-    interval={8000}
-    pause={false}
-    touch={false}
-    keyboard={false}
-    slide>
-      <Carousel.Item>
-        <div className="hero-slide bg1">
-          <div className="hero-overlay" />
-          <Container className="home-hero-content text-center">
-            <h1 className="home-hero-title">Empowering Your Communication</h1>
-            <p className="home-hero-subtitle ">Reliable, scalable, and tailored for your business.</p>
-            <div className="home-hero-buttons">
-              <Button variant="primary" size="lg" href="#/About">Learn More</Button>
-              <Button variant="outline-light" size="lg" href="#/Services">Our Services</Button>
-            </div>
-          </Container>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="hero-slide bg2">
-          <div className="hero-overlay" />
-          <Container className="home-hero-content text-center">
-            <h1 className="home-hero-title">Advanced Call Solutions</h1>
-            <p className="home-hero-subtitle ">Seamless connections. Smarter business outcomes.</p>
-            <div className="home-hero-buttons">
-              <Button variant="primary" size="lg" href="#/About">Explore Features</Button>
-              <Button variant="outline-light" size="lg" href="#/Services">View Services</Button>
-            </div>
-          </Container>
-        </div>
-      </Carousel.Item>
-    </Carousel>
+  <section className="hero-section homepage-section" id="hero">
+    {/* Background layers */}
+    <div className="hero-bg-grid" />
+    <div className="hero-orb hero-orb--1" />
+    <div className="hero-orb hero-orb--2" />
+    <div className="hero-orb hero-orb--3" />
+
+    {/* Image that blends into the background */}
+    <div className="hero-visual">
+      <img
+        src={heroImg}
+        alt="Bhagirath IT Solutions Dashboard & Support"
+        className="hero-tech-img"
+      />
+    </div>
+
+    <Container fluid className="px-lg-5" style={{ position: "relative", zIndex: 2 }}>
+      <Row className="align-items-center">
+        <Col lg={6} className="text-start ps-lg-4">
+          <div className="hero-badge mb-3">
+            <span className="hero-badge-dot" />
+            Trusted Business Outsourcing Partner
+          </div>
+
+          <h1 className="hero-title mb-3">
+            Outsource <span className="highlight">Smarter.</span>{" "}
+            Operate <span className="highlight">Better.</span>{" "}
+            Grow <span className="highlight">Faster.</span>
+          </h1>
+
+          <p className="hero-subtitle mb-4">
+            At Bhagirath Solutions, we help businesses simplify operations, improve
+            productivity, and build capacity through reliable outsourcing and
+            technology services — from IT support and customer service to business
+            administration, virtual assistance, and lead generation.
+          </p>
+
+          <div className="hero-buttons">
+            <a href="#/Enquiry" className="btn-hero-primary">
+              Get Started Today <span>→</span>
+            </a>
+            <a href="#/Services" className="btn-hero-secondary">
+              Explore Our Services
+            </a>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   </section>
 );
 

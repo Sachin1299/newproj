@@ -1,529 +1,343 @@
-// import React from "react";
-// import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
-// import { motion } from "framer-motion";
-// import "../style/career.css";
-
-// const Career = () => {
-//   return (
-//     <div className="career-page">
-//       <Container className="py-5">
-//         <motion.div
-//           initial={{ opacity: 0, y: -30 }}
-//           animate={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.6 }}
-//         >
-//           <h1 className="text-center mb-4 text-primary">Join Our Team</h1>
-//           <p className="text-center mb-5 lead">
-//             Be part of a fast-paced team dedicated to transforming communication technology and customer support services.
-//           </p>
-//         </motion.div>
-
-//         {/* Culture Cards */}
-//         <Row className="mb-5">
-//           {[
-//             {
-//               title: "Innovative Culture",
-//               text: "We embrace creativity and fresh ideas to shape the future of support solutions.",
-//             },
-//             {
-//               title: "Meaningful Work",
-//               text: "Join a mission-driven company that values positive impact and real change.",
-//             },
-//             {
-//               title: "Collaborative Team",
-//               text: "Work with passionate individuals who uplift and challenge each other.",
-//             },
-//           ].map((item, index) => (
-//             <Col md={4} key={index} className="mb-4">
-//               <Card className="h-100 shadow-sm">
-//                 <Card.Body>
-//                   <Card.Title className="text-primary">{item.title}</Card.Title>
-//                   <Card.Text>{item.text}</Card.Text>
-//                 </Card.Body>
-//               </Card>
-//             </Col>
-//           ))}
-//         </Row>
-
-//         {/* Open Positions */}
-//         <h3 className="text-center mb-4 text-primary">Open Positions</h3>
-//         <Row className="mb-5">
-//           {[
-//             {
-//               role: "Frontend Developer (React)",
-//               location: "Remote / Bangalore",
-//               type: "Full-time",
-//             },
-//             {
-//               role: "Backend Developer (Spring Boot)",
-//               location: "Remote / Pune",
-//               type: "Full-time",
-//             },
-//             {
-//               role: "Technical Support Executive",
-//               location: "Hyderabad",
-//               type: "Part-time",
-//             },
-//           ].map((job, index) => (
-//             <Col md={4} key={index} className="mb-4">
-//               <Card className="h-100 job-card">
-//                 <Card.Body>
-//                   <Card.Title>{job.role}</Card.Title>
-//                   <Card.Text>
-//                     <strong>Location:</strong> {job.location}<br />
-//                     <strong>Type:</strong> {job.type}
-//                   </Card.Text>
-//                   <Button variant="outline-primary" size="sm">Apply Now</Button>
-//                 </Card.Body>
-//               </Card>
-//             </Col>
-//           ))}
-//         </Row>
-
-//         {/* Upload Resume Section */}
-//         <Row className="mb-5">
-//           <Col md={8} className="mx-auto">
-//             <h4 className="text-center mb-3">Didn't find a match? Send us your resume!</h4>
-//             <Form className="resume-upload-form p-4 border rounded shadow-sm bg-light">
-//               <Form.Group className="mb-3">
-//                 <Form.Label>Your Name</Form.Label>
-//                 <Form.Control type="text" placeholder="Full Name" required />
-//               </Form.Group>
-
-//               <Form.Group className="mb-3">
-//                 <Form.Label>Email</Form.Label>
-//                 <Form.Control type="email" placeholder="Your Email" required />
-//               </Form.Group>
-
-//               <Form.Group className="mb-3">
-//                 <Form.Label>Upload Resume</Form.Label>
-//                 <Form.Control type="file" accept=".pdf,.doc,.docx" required />
-//               </Form.Group>
-
-//               <Button type="submit" variant="primary" className="w-100">Submit Resume</Button>
-//             </Form>
-//           </Col>
-//         </Row>
-
-//         {/* Perks Section */}
-//         <h3 className="text-center mb-4 text-primary">Perks & Benefits</h3>
-//         <Row className="text-center mb-5">
-//           {[
-//             "🌍 Remote Flexibility",
-//             "📚 Learning Budget",
-//             "💻 Modern Tech Stack",
-//             "👥 Inclusive Culture",
-//             "🎉 Team Retreats",
-//             "🩺 Health Coverage",
-//           ].map((perk, index) => (
-//             <Col xs={6} md={4} key={index} className="mb-3">
-//               <div className="perk-box p-3 bg-white shadow-sm rounded h-100">
-//                 {perk}
-//               </div>
-//             </Col>
-//           ))}
-//         </Row>
-//       </Container>
-//     </div>
-//   );
-// };
-
-// export default Career;
-
-
-// import React from "react";
-// import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
-// import { motion } from "framer-motion";
-// import "../style/career.css";
-// import { FaClipboard } from 'react-icons/fa';
-
-
-// const Career = () => {
-//     const jobOpenings = [];
-//     return (
-//         <div className="career-page">
-//             <Container className="py-5">
-//                 <motion.div
-//                     initial={{ opacity: 0, y: -30 }}
-//                     animate={{ opacity: 1, y: 0 }}
-//                     transition={{ duration: 0.6 }}
-//                 >
-//                     <h1 className="text-center mb-4 text-primary">Join Our Team</h1>
-//                     <p className="text-center mb-5 lead">
-//                         Be part of a fast-paced team dedicated to transforming communication technology and customer support services.
-//                     </p>
-//                 </motion.div>
-
-//                 {/* Culture Cards */}
-//                 <Row className="mb-5">
-//                     {[
-//                         {
-//                             title: "Innovative Culture",
-//                             text: "We embrace creativity and fresh ideas to shape the future of support solutions.",
-//                         },
-//                         {
-//                             title: "Meaningful Work",
-//                             text: "Join a mission-driven company that values positive impact and real change.",
-//                         },
-//                         {
-//                             title: "Collaborative Team",
-//                             text: "Work with passionate individuals who uplift and challenge each other.",
-//                         },
-//                     ].map((item, index) => (
-//                         <Col md={4} key={index} className="mb-4">
-//                             <Card className="h-100 shadow-sm">
-//                                 <Card.Body>
-//                                     <Card.Title className="text-primary">{item.title}</Card.Title>
-//                                     <Card.Text>{item.text}</Card.Text>
-//                                 </Card.Body>
-//                             </Card>
-//                         </Col>
-//                     ))}
-//                 </Row>
-
-//                 {/* Open Positions */}
-//                 {jobOpenings.length === 0 ? (
-//                     <motion.div
-//                         className="no-openings text-center p-3 rounded shadow-sm"
-//                         initial={{ opacity: 0, y: 30 }}
-//                         animate={{ opacity: 1, y: 0 }}
-//                         transition={{ duration: 0.6 }}
-//                     >
-//                         <FaClipboard size={50} className="text-muted mb-3" />
-//                         <h4 className="text-primary">No Current Openings</h4>
-//                         <p className="text-muted mb-4">
-//                             We don't have any open positions right now, but we’re always happy to hear from talented people.
-//                         </p>
-//                     </motion.div>
-//                 ) : (
-//                     <span>Jobs availble</span>
-//                 )}
-
-
-//                 {/* Upload Resume Section */}
-//                 <Row className="mb-5">
-//                     <Col md={8} className="mx-auto">
-//                         <h4 className="text-center mb-3">Didn't find a match? Send us your resume!</h4>
-//                         <Form className="resume-upload-form p-4 border rounded shadow-sm bg-light">
-//                             <Form.Group className="mb-3">
-//                                 <Form.Label>Your Name</Form.Label>
-//                                 <Form.Control type="text" placeholder="Full Name" required />
-//                             </Form.Group>
-
-//                             <Form.Group className="mb-3">
-//                                 <Form.Label>Email</Form.Label>
-//                                 <Form.Control type="email" placeholder="Your Email" required />
-//                             </Form.Group>
-
-//                             <Form.Group className="mb-3">
-//                                 <Form.Label>Upload Resume</Form.Label>
-//                                 <Form.Control type="file" accept=".pdf,.doc,.docx" required />
-//                             </Form.Group>
-
-//                             <Button type="submit" variant="primary" className="w-100">Submit Resume</Button>
-//                         </Form>
-//                     </Col>
-//                 </Row>
-
-//                 {/* Perks Section */}
-//                 <h3 className="text-center mb-4 text-primary">Perks & Benefits</h3>
-//                 <Row className="text-center mb-5">
-//                     {[
-//                         "🌍 Remote Flexibility",
-//                         "📚 Learning Budget",
-//                         "💻 Modern Tech Stack",
-//                         "👥 Inclusive Culture",
-//                         "🎉 Team Retreats",
-//                         "🩺 Health Coverage",
-//                     ].map((perk, index) => (
-//                         <Col xs={6} md={4} key={index} className="mb-3">
-//                             <div className="perk-box p-3 bg-white shadow-sm rounded h-100">
-//                                 {perk}
-//                             </div>
-//                         </Col>
-//                     ))}
-//                 </Row>
-//             </Container>
-//         </div>
-//     );
-// };
-
-// export default Career;
-
-
-// import React, { useState } from "react";
-// import { Container, Row, Col, Card, Form, Button, Alert } from "react-bootstrap";
-// import { motion } from "framer-motion";
-// import "../style/career.css";
-// import { FaClipboard } from 'react-icons/fa';
-
-// const Career = () => {
-//     const [isSubmitted, setIsSubmitted] = useState(false);
-//     const [isLoading, setIsLoading] = useState(false);
-//     const jobOpenings = [];
-//     const handleFormSubmit = async (e) => {
-//       e.preventDefault(); // prevent default redirect
-//       setIsLoading(true);
-  
-//       const form = e.target;
-//       const formData = new FormData(form);
-  
-//       try {
-//         const response = await fetch("https://formspree.io/f/xrbpnwpo", {
-//           method: "POST",
-//           body: formData,
-//           headers: {
-//             Accept: "application/json",
-//           },
-//         });
-  
-//         if (response.ok) {
-//           setIsSubmitted(true);
-//           form.reset();
-//         } else {
-//           alert("Something went wrong. Please try again later.");
-//         }
-//       } catch (error) {
-//         alert("Error submitting form!");
-//       } finally {
-//         setIsLoading(false);
-//       }
-//     };
-  
-//   return (
-//     <div className="career-page">
-//       <Container className="py-5">
-//         <motion.div
-//           initial={{ opacity: 0, y: -30 }}
-//           animate={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.6 }}
-//         >
-//           <h1 className="text-center mb-4 text-primary">Join Our Team</h1>
-//           <p className="text-center mb-5 lead">
-//             Be part of a fast-paced team dedicated to transforming communication technology and customer support services.
-//           </p>
-//         </motion.div>
-
-//         {/* Culture Cards */}
-//         <Row className="mb-5">
-//           {[
-//             {
-//               title: "Innovative Culture",
-//               text: "We embrace creativity and fresh ideas to shape the future of support solutions.",
-//             },
-//             {
-//               title: "Meaningful Work",
-//               text: "Join a mission-driven company that values positive impact and real change.",
-//             },
-//             {
-//               title: "Collaborative Team",
-//               text: "Work with passionate individuals who uplift and challenge each other.",
-//             },
-//           ].map((item, index) => (
-//             <Col md={4} key={index} className="mb-4">
-//               <Card className="h-100 shadow-sm">
-//                 <Card.Body>
-//                   <Card.Title className="text-primary">{item.title}</Card.Title>
-//                   <Card.Text>{item.text}</Card.Text>
-//                 </Card.Body>
-//               </Card>
-//             </Col>
-//           ))}
-//         </Row>
-
-//         {/* Open Positions */}
-//         {jobOpenings.length === 0 ? (
-//           <motion.div
-//             className="no-openings text-center p-3 rounded shadow-sm"
-//             initial={{ opacity: 0, y: 30 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 0.6 }}
-//           >
-//             <FaClipboard size={50} className="text-muted mb-3" />
-//             <h4 className="text-primary">No Current Openings</h4>
-//             <p className="text-muted mb-4">
-//               We don't have any open positions right now, but we’re always happy to hear from talented people.
-//             </p>
-//           </motion.div>
-//         ) : (
-//           <span>Jobs available</span>
-//         )}
-
-//         {/* Upload Resume Form */}
-//         <Row className="mb-5">
-//           <Col md={8} className="mx-auto">
-//             <h4 className="text-center mb-3">Didn't find a match? Send us your resume!</h4>
-
-//             {isSubmitted ? (
-//                 <div className="alert alert-success text-center">
-//                   🎉 Thank you! Your message has been sent.
-//                 </div>
-//               ) : (
-//                 <Form onSubmit={handleFormSubmit}>
-//                   <Form.Group className="mb-3">
-//                     <Form.Control type="text" name="name" placeholder="Your Name" required />
-//                   </Form.Group>
-
-//                   <Form.Group className="mb-3">
-//                     <Form.Control type="email" name="email" placeholder="Your Email" required />
-//                   </Form.Group>
-
-//                   <Form.Group className="mb-3">
-//                     <Form.Control
-//                       as="textarea"
-//                       name="message"
-//                       rows={4}
-//                       placeholder="Your Message"
-//                       required
-//                     />
-//                   </Form.Group>
-
-//                   <Button variant="primary" type="submit" className="w-100" disabled={isLoading}>
-//                     {isLoading ? "Sending..." : "Submit"}
-//                   </Button>
-//                 </Form>
-//               )}
-//           </Col>
-//         </Row>
-
-//         {/* Perks Section */}
-//         <h3 className="text-center mb-4 text-primary">Perks & Benefits</h3>
-//         <Row className="text-center mb-5">
-//           {[
-//             "🌍 Remote Flexibility",
-//             "📚 Learning Budget",
-//             "💻 Modern Tech Stack",
-//             "👥 Inclusive Culture",
-//             "🎉 Team Retreats",
-//             "🩺 Health Coverage",
-//           ].map((perk, index) => (
-//             <Col xs={6} md={4} key={index} className="mb-3">
-//               <div className="perk-box p-3 bg-white shadow-sm rounded h-100">
-//                 {perk}
-//               </div>
-//             </Col>
-//           ))}
-//         </Row>
-//       </Container>
-//     </div>
-//   );
-// };
-
-// export default Career;
-
-
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
+import {
+  FaClipboard,
+  FaCheckCircle,
+  FaShieldAlt,
+  FaComments,
+  FaChartLine,
+  FaHandshake,
+  FaCode,
+  FaMapMarkerAlt,
+  FaBriefcase,
+  FaClock,
+  FaArrowRight,
+} from "react-icons/fa";
 import "../style/career.css";
-import { FaClipboard } from "react-icons/fa";
+
+// Current openings. Edit the details to match the real roles,
+// or set this to an empty array [] to hide the whole section.
+const openings = [
+  {
+    id: "java-developer",
+    title: "Java Developer",
+    type: "Full-time",
+    location: "Bhopal, Madhya Pradesh",
+    experience: "1–3 years",
+    summary:
+      "Build and maintain Java-based web applications and integrations that support our clients’ business workflows.",
+    responsibilities: [
+      "Develop, test, and maintain Java applications and REST APIs.",
+      "Work with Spring Boot and relational databases such as MySQL or PostgreSQL.",
+      "Fix bugs, support third-party integrations, and keep technical documentation up to date.",
+      "Coordinate with the team to deliver tasks on agreed timelines.",
+    ],
+    requirements: [
+      "Solid knowledge of Core Java, object-oriented programming, and collections.",
+      "Hands-on experience with Spring or Spring Boot and SQL.",
+      "Familiarity with Git and basic testing and debugging practices.",
+      "Clear communication and a willingness to learn.",
+    ],
+  },
+  {
+    id: "senior-java-developer",
+    title: "Senior Java Developer",
+    type: "Full-time",
+    location: "Bhopal, Madhya Pradesh",
+    experience: "3+ years",
+    summary:
+      "Lead the design and delivery of Java solutions, review code, and guide junior developers on client projects.",
+    responsibilities: [
+      "Design and build scalable Java and Spring Boot services and integrations.",
+      "Review code and mentor junior developers.",
+      "Plan work with clients and the team, and estimate tasks.",
+      "Troubleshoot production issues and improve performance and reliability.",
+    ],
+    requirements: [
+      "3+ years of professional Java development experience.",
+      "Strong knowledge of Spring Boot, REST APIs, SQL, and database design.",
+      "Experience with Git, basic CI/CD, and automated testing.",
+      "Ability to communicate clearly with clients and team members.",
+    ],
+  },
+];
+
+// Areas taken from the services described on the About page
+const areas = [
+  "IT Support & Digital Solutions",
+  "Customer Service",
+  "Business Administration & Back Office",
+  "Virtual Assistance",
+  "Sales Support & Lead Generation",
+];
+
+// Values taken from the About page, so the two pages say the same thing
+const values = [
+  {
+    title: "Reliability",
+    text: "We value consistency, ownership, and completing agreed tasks responsibly.",
+    icon: FaShieldAlt,
+  },
+  {
+    title: "Clear Communication",
+    text: "Good coordination and timely updates are essential to successful partnerships.",
+    icon: FaComments,
+  },
+  {
+    title: "Continuous Improvement",
+    text: "We look for practical ways to improve workflows, service delivery, and productivity.",
+    icon: FaChartLine,
+  },
+  {
+    title: "Partnership",
+    text: "We work to understand objectives and align our support with business needs.",
+    icon: FaHandshake,
+  },
+];
 
 const Career = () => {
   const [state, handleSubmit] = useForm("xrbpnwpo");
+  const [position, setPosition] = useState("");
+  const formRef = useRef(null);
+
+  // "Apply Now" pre-selects the role and scrolls to the form
+  const applyFor = (title) => {
+    setPosition(title);
+    formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <div className="career-page">
-      <Container className="py-5">
-        <motion.div
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="text-center mb-4 text-primary">Join Our Team</h1>
-          <p className="text-center mb-5 lead">
-            Be part of a fast-paced team dedicated to transforming communication technology and customer support services.
+      {/* Hero banner */}
+      <section className="career-hero">
+        <Container className="career-hero-inner">
+          <span className="career-badge">
+            <span className="career-badge-dot" />
+            Careers
+          </span>
+          <h1 className="career-hero-title">Join Our Growing Team</h1>
+          <p className="career-hero-subtitle">
+            Be part of a dynamic team dedicated to delivering dependable outsourcing and
+            technology services that help organisations operate smarter and grow faster.
           </p>
-        </motion.div>
+        </Container>
+      </section>
 
-        {/* Culture Cards */}
-        <Row className="mb-5">
-          {[
-            {
-              title: "Innovative Culture",
-              text: "We embrace creativity and fresh ideas to shape the future of support solutions.",
-            },
-            {
-              title: "Meaningful Work",
-              text: "Join a mission-driven company that values positive impact and real change.",
-            },
-            {
-              title: "Collaborative Team",
-              text: "Work with passionate individuals who uplift and challenge each other.",
-            },
-          ].map((item, index) => (
-            <Col md={4} key={index} className="mb-4">
-              <Card className="h-100 shadow-sm">
-                <Card.Body>
-                  <Card.Title className="text-primary">{item.title}</Card.Title>
-                  <Card.Text>{item.text}</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+      <Container className="career-body">
+        {/* Current openings */}
+        {openings.length > 0 && (
+          <div className="mb-5">
+            <div className="text-center mb-4">
+              <h3 className="fw-bold career-card-title">Current Openings</h3>
+              <p className="text-muted small">
+                Apply for a role below, or send a general application using the form.
+              </p>
+            </div>
 
-        {/* No Job Openings */}
-        <motion.div
-          className="no-openings text-center p-3 rounded shadow-sm"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <FaClipboard size={50} className="text-muted mb-3" />
-          <h4 className="text-primary">No Current Openings</h4>
-          <p className="text-muted mb-4">
-            We don't have any open positions right now, but we’re always happy to hear from talented people.
-          </p>
-        </motion.div>
+            <Row className="g-4">
+              {openings.map((job) => (
+                <Col lg={6} key={job.id}>
+                  <Card className="career-job-card h-100 border-0 shadow-sm">
+                    <Card.Body className="p-4 d-flex flex-column">
+                      <div className="d-flex align-items-start gap-3 mb-3">
+                        <div className="career-job-icon">
+                          <FaCode size={22} />
+                        </div>
+                        <div>
+                          <h4 className="career-job-title">{job.title}</h4>
+                          <div className="career-job-meta">
+                            <span><FaClock size={11} /> {job.type}</span>
+                            <span><FaMapMarkerAlt size={11} /> {job.location}</span>
+                            <span><FaBriefcase size={11} /> {job.experience}</span>
+                          </div>
+                        </div>
+                      </div>
 
-        {/* Enquiry-style Contact Form */}
-        <Row className="mt-5">
-          <Col md={8} className="mx-auto">
-            <h4 className="text-center mb-3">Drop us a message!</h4>
-            {state.succeeded ? (
-              <p className="text-success text-center">Thanks! We'll get in touch soon.</p>
-            ) : (
-              <Form onSubmit={handleSubmit} className="p-4 border rounded shadow-sm bg-light">
-                <Form.Group className="mb-3">
-                  <Form.Label>Your Name</Form.Label>
-                  <Form.Control type="text" name="name" placeholder="Full Name" required />
-                  <ValidationError prefix="Name" field="name" errors={state.errors} />
-                </Form.Group>
+                      <p className="career-job-summary">{job.summary}</p>
 
-                <Form.Group className="mb-3">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" name="email" placeholder="Your Email" required />
-                  <ValidationError prefix="Email" field="email" errors={state.errors} />
-                </Form.Group>
+                      <h6 className="career-job-subtitle">Key Responsibilities</h6>
+                      <ul className="career-job-list">
+                        {job.responsibilities.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
 
-                <Form.Group className="mb-3">
-                  <Form.Label>Your Message</Form.Label>
-                  <Form.Control as="textarea" rows={4} name="message" placeholder="Your Message" required />
-                  <ValidationError prefix="Message" field="message" errors={state.errors} />
-                </Form.Group>
+                      <h6 className="career-job-subtitle">Requirements</h6>
+                      <ul className="career-job-list">
+                        {job.requirements.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
 
-                <Button type="submit" variant="primary" className="w-100" disabled={state.submitting}>
-                  Submit
-                </Button>
-              </Form>
-            )}
+                      <button
+                        type="button"
+                        className="career-apply-btn"
+                        onClick={() => applyFor(job.title)}
+                      >
+                        Apply Now <FaArrowRight size={13} />
+                      </button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </div>
+        )}
+
+        {/* General info + Application form */}
+        <Row className="g-4 g-lg-5 mb-5">
+          <Col lg={5}>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="career-notice bg-white rounded-4 shadow-sm p-4 mb-4">
+                <div className="career-notice-icon mb-3">
+                  <FaClipboard size={22} />
+                </div>
+                <h3 className="fw-bold mb-2 career-card-title">Don’t See a Fit?</h3>
+                <p className="text-muted small mb-0" style={{ lineHeight: 1.6 }}>
+                  We are always keen to hear from capable people. Send us your details
+                  and we’ll keep your profile on file for future roles.
+                </p>
+              </div>
+
+              <div className="career-areas bg-white rounded-4 shadow-sm p-4">
+                <h5 className="fw-bold mb-3 career-card-title">Areas We Work In</h5>
+                <ul className="career-area-list">
+                  {areas.map((area) => (
+                    <li key={area}>
+                      <FaCheckCircle className="career-area-check" />
+                      {area}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          </Col>
+
+          <Col lg={7}>
+            <div ref={formRef} className="career-form-anchor">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <Card className="border-0 shadow-sm p-4 p-md-5 career-card-main">
+                  <h3 className="fw-bold mb-4 career-card-title">Apply Now</h3>
+                  {state.succeeded ? (
+                    <div className="alert alert-success text-center py-4 rounded-3">
+                      <h5 className="fw-bold mb-1">🎉 Thank you for applying!</h5>
+                      <p className="mb-0 small">
+                        We have received your details and will get in touch if your profile matches our requirements.
+                      </p>
+                    </div>
+                  ) : (
+                    <Form onSubmit={handleSubmit} className="career-form">
+                      {/* Tells you which page the submission came from (Enquiry uses the same Formspree form) */}
+                      <input type="hidden" name="form_type" value="Career application" />
+                      <input type="hidden" name="_subject" value="New career application – Bhagirath IT Solutions" />
+
+                      <Row>
+                        <Col md={6} className="mb-3">
+                          <Form.Group>
+                            <Form.Label className="small fw-semibold">Full Name</Form.Label>
+                            <Form.Control type="text" name="name" placeholder="Your full name" required className="py-2" />
+                            <ValidationError prefix="Name" field="name" errors={state.errors} className="text-danger small mt-1" />
+                          </Form.Group>
+                        </Col>
+                        <Col md={6} className="mb-3">
+                          <Form.Group>
+                            <Form.Label className="small fw-semibold">Email Address</Form.Label>
+                            <Form.Control type="email" name="email" placeholder="you@example.com" required className="py-2" />
+                            <ValidationError prefix="Email" field="email" errors={state.errors} className="text-danger small mt-1" />
+                          </Form.Group>
+                        </Col>
+                      </Row>
+
+                      <Row>
+                        <Col md={6} className="mb-3">
+                          <Form.Group>
+                            <Form.Label className="small fw-semibold">Position / Area of Interest</Form.Label>
+                            <Form.Select
+                              name="position"
+                              value={position}
+                              onChange={(e) => setPosition(e.target.value)}
+                              className="py-2"
+                            >
+                              <option value="">General application (no preference)</option>
+                              {openings.length > 0 && (
+                                <optgroup label="Current openings">
+                                  {openings.map((job) => (
+                                    <option key={job.id} value={job.title}>
+                                      {job.title}
+                                    </option>
+                                  ))}
+                                </optgroup>
+                              )}
+                              <optgroup label="Area of interest">
+                                {areas.map((area) => (
+                                  <option key={area} value={area}>
+                                    {area}
+                                  </option>
+                                ))}
+                              </optgroup>
+                            </Form.Select>
+                          </Form.Group>
+                        </Col>
+                        <Col md={6} className="mb-3">
+                          <Form.Group>
+                            <Form.Label className="small fw-semibold">Resume / Portfolio Link</Form.Label>
+                            <Form.Control type="url" name="resume_link" placeholder="https:// (optional)" className="py-2" />
+                            <ValidationError prefix="Link" field="resume_link" errors={state.errors} className="text-danger small mt-1" />
+                          </Form.Group>
+                        </Col>
+                      </Row>
+
+                      <Form.Group className="mb-4">
+                        <Form.Label className="small fw-semibold">Tell us about your skills & background</Form.Label>
+                        <Form.Control
+                          as="textarea"
+                          rows={4}
+                          name="message"
+                          placeholder="Share your experience, preferred role, and anything else we should know..."
+                          required
+                          className="py-2"
+                        />
+                        <ValidationError prefix="Message" field="message" errors={state.errors} className="text-danger small mt-1" />
+                      </Form.Group>
+
+                      <Button type="submit" className="w-100 py-3 fw-bold career-submit" disabled={state.submitting}>
+                        {state.submitting ? "Submitting Application..." : "Submit Application"}
+                      </Button>
+                    </Form>
+                  )}
+                </Card>
+              </motion.div>
+            </div>
           </Col>
         </Row>
 
-        {/* Perks Section */}
-        <h3 className="text-center my-5 text-primary">Perks & Benefits</h3>
-        <Row className="text-center mb-5">
-          {[
-            "🌍 Remote Flexibility",
-            "📚 Learning Budget",
-            "💻 Modern Tech Stack",
-            "👥 Inclusive Culture",
-            "🎉 Team Retreats",
-            "🩺 Health Coverage",
-          ].map((perk, index) => (
-            <Col xs={6} md={4} key={index} className="mb-3">
-              <div className="perk-box p-3 bg-white shadow-sm rounded h-100">{perk}</div>
+        {/* What we value */}
+        <div className="text-center mb-4">
+          <h3 className="fw-bold career-card-title">What We Value</h3>
+          <p className="text-muted small">The principles behind how we work.</p>
+        </div>
+        <Row className="g-4">
+          {values.map(({ title, text, icon: Icon }) => (
+            <Col md={3} sm={6} key={title}>
+              <Card className="h-100 border-0 shadow-sm p-4 rounded-4 career-culture-card">
+                <Card.Body className="p-0">
+                  <div className="career-value-icon mb-3">
+                    <Icon size={24} />
+                  </div>
+                  <h4 className="fw-bold mb-2 career-card-title" style={{ fontSize: "1.1rem" }}>{title}</h4>
+                  <p className="text-muted small mb-0" style={{ lineHeight: 1.6 }}>{text}</p>
+                </Card.Body>
+              </Card>
             </Col>
           ))}
         </Row>
