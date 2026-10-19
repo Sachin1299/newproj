@@ -78,7 +78,7 @@ const Enquiry = () => {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch("https://formspree.io/f/xrbpnwpo", {
+      const response = await fetch("https://formspree.io/f/xljgkwbl", {
         method: "POST",
         body: formData,
         headers: {
