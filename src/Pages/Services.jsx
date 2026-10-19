@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -203,6 +204,15 @@ const Services = () => {
 
     return (
         <div className="services-page">
+            <Helmet>
+                <title>Our Services | IT Support, BPO & Web Development | Bhagirath IT Solutions</title>
+                <meta
+                    name="description"
+                    content="Explore professional outsourcing services by Bhagirath IT Solutions, including IT support, BPO, virtual assistance, web development, and customer service."
+                />
+                <link rel="canonical" href="https://bhagirathitsolutions.co.in/#/Services" />
+            </Helmet>
+
             {/* Hero Section */}
             <section className="services-hero">
                 <div className="services-hero-visual">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaShieldAlt, FaComments, FaChartLine, FaHandshake } from "react-icons/fa";
@@ -8,6 +9,15 @@ import supportimg from "../img/who_we_are.png";
 const About = () => {
   return (
     <div className="about-page">
+      <Helmet>
+        <title>About Us | Mission, Vision & Values | Bhagirath IT Solutions</title>
+        <meta
+          name="description"
+          content="Learn about Bhagirath IT Solutions, our mission, vision, core values, and how we help companies outsource smarter and operate better."
+        />
+        <link rel="canonical" href="https://bhagirathitsolutions.co.in/#/About" />
+      </Helmet>
+
       {/* Hero Section */}
       <div className="about-hero">
         <Container className="about-hero-inner">

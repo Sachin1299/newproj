@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
@@ -110,6 +111,15 @@ const Career = () => {
 
   return (
     <div className="career-page">
+      <Helmet>
+        <title>Careers & Openings | Bhagirath IT Solutions</title>
+        <meta
+          name="description"
+          content="Explore career opportunities and job openings at Bhagirath IT Solutions. Join our growing team in software development, IT support, and business operations."
+        />
+        <link rel="canonical" href="https://bhagirathitsolutions.co.in/#/Careers" />
+      </Helmet>
+
       {/* Hero banner */}
       <section className="career-hero">
         <Container className="career-hero-inner">

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Container, Row, Col, Form, Button, Card, Accordion } from "react-bootstrap";
 import { motion } from "framer-motion";
 import {
@@ -100,6 +101,15 @@ const Enquiry = () => {
 
   return (
     <div className="enquiry-page">
+      <Helmet>
+        <title>Contact Us & Enquiry | Bhagirath IT Solutions</title>
+        <meta
+          name="description"
+          content="Get in touch with Bhagirath IT Solutions. Submit an enquiry to discuss your software, IT support, virtual assistance, or outsourcing requirements."
+        />
+        <link rel="canonical" href="https://bhagirathitsolutions.co.in/#/Enquiry" />
+      </Helmet>
+
       {/* Hero banner */}
       <section className="enquiry-hero">
         <Container className="enquiry-hero-inner">
