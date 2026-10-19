@@ -75,6 +75,128 @@
   color: #1F293A;
 }
 
+/* ===== JOB OPENINGS ===== */
+.career-job-card {
+  background: #fff;
+  border-radius: 16px;
+  border-left: 5px solid #1F293A !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.career-job-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+  border-left-color: #20998E !important;
+}
+
+.career-job-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background-color: #E8F7F5;
+  color: #20998E;
+}
+
+.career-job-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1F293A;
+  margin: 0 0 0.5rem;
+}
+
+.career-job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.career-job-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: #F1F5F9;
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.career-job-meta svg {
+  color: #20998E;
+}
+
+.career-job-summary {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.career-job-subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #20998E;
+  margin: 0 0 0.6rem;
+}
+
+.career-job-list {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+.career-job-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: #4a5568;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.career-job-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #20998E;
+  font-weight: 700;
+}
+
+.career-apply-btn {
+  align-self: flex-start;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.6rem;
+  border: 0;
+  border-radius: 999px;
+  background: #20998E;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(32, 153, 142, 0.3);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.career-apply-btn:hover {
+  background: #1b857b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(32, 153, 142, 0.4);
+}
+
+/* Keeps the form clear of the navbar after "Apply Now" scrolls to it */
+.career-form-anchor {
+  scroll-margin-top: 90px;
+}
+
 /* ===== NOTICE + AREAS ===== */
 .career-notice {
   border: 1px solid rgba(0, 0, 0, 0.05);

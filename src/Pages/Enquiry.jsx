@@ -52,7 +52,7 @@ const faqs = [
 ];
 
 const contactItems = [
-  { icon: FaPhoneAlt, title: "Phone", text: "+91 (Business Support)" },
+  { icon: FaPhoneAlt, title: "Phone", text: "+91 9589036973" },
   { icon: FaClock, title: "Working Hours", text: "Mon - Sat: 9:00 AM - 6:00 PM" },
   { icon: FaMapMarkerAlt, title: "Office Address", text: "Bhopal, Madhya Pradesh - 462023, India" },
   { icon: FaEnvelope, title: "Email", text: "support@bhagirathitsolutions.co.in", breakText: true },

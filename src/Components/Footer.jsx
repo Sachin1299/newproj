@@ -5,7 +5,7 @@ import logoImg from "../img/logo.png";
 import "../style/footer.css";
 
 // Change the name here and it updates everywhere in the footer
-const companyName = "Bhagirath Solution";
+const companyName = "Bhagirath IT Solutions";
 
 const quickLinks = [
   { label: "Home", to: "/" },
